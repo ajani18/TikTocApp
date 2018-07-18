@@ -223,6 +223,13 @@
                                     <action selector="StopAction2:" destination="H0l-HS-nht" eventType="touchUpInside" id="eBA-vf-V4f"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n15-8O-FwJ">
+                                <rect key="frame" x="30" y="323" width="291" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ndQ-Mz-cd9"/>
@@ -238,11 +245,12 @@
                         <outlet property="start2" destination="MWa-oC-ZYT" id="5VI-11-2P2"/>
                         <outlet property="stop" destination="1ZN-VB-hqC" id="gXI-lS-e0F"/>
                         <outlet property="stop2" destination="zlm-IS-mkC" id="iLJ-Ek-1qT"/>
+                        <outlet property="winnerLabel" destination="n15-8O-FwJ" id="vqg-dy-TGD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoT-U4-sN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2310" y="34"/>
+            <point key="canvasLocation" x="2309.5999999999999" y="33.733133433283363"/>
         </scene>
     </scenes>
 </document>

@@ -10,6 +10,9 @@ import UIKit
 
 class MultiplayerViewController: UIViewController {
     
+    @IBOutlet weak var winnerLabel: UILabel!
+    
+    
     //Player 1 Varaibles
     
     var timer = Timer()
@@ -108,7 +111,7 @@ class MultiplayerViewController: UIViewController {
         start.isEnabled = true
         stop.isEnabled = true
         
-        start2.isEnabled = false 
+        start2.isEnabled = false
         reset.isEnabled = false
         
         
@@ -170,8 +173,11 @@ class MultiplayerViewController: UIViewController {
 
         reset2.isEnabled = false
         reset.isEnabled = true
+        
+        winnerLabel.isHidden = true
 
         start2.isEnabled = false
+
         
     }
     
@@ -188,6 +194,8 @@ class MultiplayerViewController: UIViewController {
 //
 //        start2.isEnabled = false
 //
+        winnerLabel.isHidden = true
+        
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore1") != nil) {
             Highscore12 = HighscoreDefault.value(forKey: "Highscore1") as! Int
