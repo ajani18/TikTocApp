@@ -50,11 +50,15 @@ class MultiplayerViewController: UIViewController {
     
     @IBAction func StartAction(_ sender: Any) {
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(MultiplayerViewController.updateCountdown), userInfo: nil, repeats: true)
-        
+
         start.isHidden = true
         stop.isHidden = false
         
         reset.isEnabled = false
+
+        reset2.isEnabled = false
+        stop2.isEnabled = false
+        start2.isEnabled = false
         
     }
     
@@ -80,13 +84,17 @@ class MultiplayerViewController: UIViewController {
         else {
             print ("ok")
         }
-        
+
         start.isHidden = false
         stop.isHidden = true
-        
-        reset.isEnabled = true
 
+        reset.isEnabled = false
+        start.isEnabled = false
         
+        start2.isEnabled = true
+        stop2.isEnabled = false
+
+
     }
     
     @IBAction func ResetAction(_ sender: Any) {
@@ -97,7 +105,12 @@ class MultiplayerViewController: UIViewController {
         stop.isHidden = true
         start.isHidden = false
         
+        start.isEnabled = true
+        stop.isEnabled = true
+        
+        start2.isEnabled = false 
         reset.isEnabled = false
+        
         
     }
     
@@ -108,8 +121,10 @@ class MultiplayerViewController: UIViewController {
         
         start2.isHidden = true
         stop2.isHidden = false
-        
+
         reset2.isEnabled = false
+
+        stop2.isEnabled = true
         
         
     }
@@ -138,7 +153,7 @@ class MultiplayerViewController: UIViewController {
         
         start2.isHidden = false
         stop2.isHidden = true
-        
+
         reset2.isEnabled = true
         start2.isEnabled = false
 
@@ -152,18 +167,27 @@ class MultiplayerViewController: UIViewController {
         
         stop2.isHidden = true
         start2.isHidden = false
-        
+
         reset2.isEnabled = false
+        reset.isEnabled = true
+
+        start2.isEnabled = false
         
     }
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
+//        stop.isEnabled = false
+//        stop2.isEnabled = false
+//
+//        reset.isEnabled = false
+//        reset2.isEnabled = false
+//
+//        start2.isEnabled = false
+//
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore1") != nil) {
             Highscore12 = HighscoreDefault.value(forKey: "Highscore1") as! Int

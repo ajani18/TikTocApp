@@ -64,6 +64,7 @@ class GeneralModeViewController: UIViewController {
         stop.isHidden = true
         
         resetBtn.isEnabled = true
+        start.isEnabled = false
 
     }
     
@@ -76,6 +77,8 @@ class GeneralModeViewController: UIViewController {
         start.isHidden = false
         
         resetBtn.isEnabled = false
+        
+        start.isEnabled = true 
         
     }
     

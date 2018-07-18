@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB1A6C1B20FE740000705AA9 /* startbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1A6C1A20FE740000705AA9 /* startbtn.png */; };
 		AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D8920FD109900BC6180 /* AppDelegate.swift */; };
 		AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D8B20FD109900BC6180 /* ViewController.swift */; };
 		AB4D3D8F20FD109900BC6180 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4D3D8D20FD109900BC6180 /* Main.storyboard */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AB1A6C1A20FE740000705AA9 /* startbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startbtn.png; path = ../../startbtn.png; sourceTree = "<group>"; };
 		AB4D3D8620FD109900BC6180 /* TikToc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikToc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4D3D8920FD109900BC6180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AB4D3D8B20FD109900BC6180 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
 				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
 				AB4D3D9020FD109A00BC6180 /* Assets.xcassets */,
-				AB1A6C1A20FE740000705AA9 /* startbtn.png */,
 				AB4D3D9220FD109A00BC6180 /* LaunchScreen.storyboard */,
 				AB4D3D9520FD109A00BC6180 /* Info.plist */,
 			);
@@ -132,7 +129,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4D3D9420FD109A00BC6180 /* LaunchScreen.storyboard in Resources */,
-				AB1A6C1B20FE740000705AA9 /* startbtn.png in Resources */,
 				AB4D3D9120FD109A00BC6180 /* Assets.xcassets in Resources */,
 				AB4D3D8F20FD109900BC6180 /* Main.storyboard in Resources */,
 			);
