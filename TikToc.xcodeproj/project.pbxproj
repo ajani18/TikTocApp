@@ -14,6 +14,7 @@
 		AB4D3D9120FD109A00BC6180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4D3D9020FD109A00BC6180 /* Assets.xcassets */; };
 		AB4D3D9420FD109A00BC6180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4D3D9220FD109A00BC6180 /* LaunchScreen.storyboard */; };
 		AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */; };
+		AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AB4D3D9320FD109A00BC6180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4D3D9520FD109A00BC6180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModeViewController.swift; sourceTree = "<group>"; };
+		AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */,
 				AB4D3D8B20FD109900BC6180 /* ViewController.swift */,
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
+				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
 				AB4D3D9020FD109A00BC6180 /* Assets.xcassets */,
 				AB1A6C1A20FE740000705AA9 /* startbtn.png */,
 				AB4D3D9220FD109A00BC6180 /* LaunchScreen.storyboard */,
@@ -143,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */,
+				AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */,
 				AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */,
 				AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */,
 			);
