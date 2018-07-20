@@ -10,7 +10,15 @@ import UIKit
 
 class MultiplayerViewController: UIViewController {
     
-    @IBOutlet weak var winnerLabel: UILabel!
+    //Player 1 Name Tag
+    
+    @IBOutlet weak var player1NameTag: UITextField!
+    
+    @IBOutlet weak var player1Name: UILabel!
+    
+    @IBAction func enterP1Name(_ sender: Any) {
+        player1Name.text = "Player 1: " + (player1NameTag.text)!
+    }
     
     
     //Player 1 Varaibles
@@ -48,6 +56,7 @@ class MultiplayerViewController: UIViewController {
     @IBOutlet weak var reset2: UIButton!
     
     @IBOutlet weak var HighscoreLbl2: UILabel!
+    
     
     //Player 1 Actions
     
@@ -174,9 +183,12 @@ class MultiplayerViewController: UIViewController {
         reset2.isEnabled = false
         reset.isEnabled = true
         
-        winnerLabel.isHidden = true
 
         start2.isEnabled = false
+        
+
+        
+        
 
         
     }
@@ -194,7 +206,8 @@ class MultiplayerViewController: UIViewController {
 //
 //        start2.isEnabled = false
 //
-        winnerLabel.isHidden = true
+        stop.isHidden = true
+        stop2.isHidden = true
         
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore1") != nil) {

@@ -13,6 +13,9 @@
 		AB4D3D9120FD109A00BC6180 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AB4D3D9020FD109A00BC6180 /* Assets.xcassets */; };
 		AB4D3D9420FD109A00BC6180 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AB4D3D9220FD109A00BC6180 /* LaunchScreen.storyboard */; };
 		AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */; };
+		AB672541210130B1009B1869 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672540210130B1009B1869 /* Rectangle.png */; };
+		AB672543210130BA009B1869 /* timeLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672542210130BA009B1869 /* timeLabel.png */; };
+		AB672545210130C1009B1869 /* starStop.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672544210130C1009B1869 /* starStop.png */; };
 		AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +28,9 @@
 		AB4D3D9320FD109A00BC6180 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AB4D3D9520FD109A00BC6180 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralModeViewController.swift; sourceTree = "<group>"; };
+		AB672540210130B1009B1869 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rectangle.png; path = ../../Rectangle.png; sourceTree = "<group>"; };
+		AB672542210130BA009B1869 /* timeLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeLabel.png; path = ../../timeLabel.png; sourceTree = "<group>"; };
+		AB672544210130C1009B1869 /* starStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starStop.png; path = ../../starStop.png; sourceTree = "<group>"; };
 		AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +70,9 @@
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
 				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
 				AB4D3D9020FD109A00BC6180 /* Assets.xcassets */,
+				AB672544210130C1009B1869 /* starStop.png */,
+				AB672542210130BA009B1869 /* timeLabel.png */,
+				AB672540210130B1009B1869 /* Rectangle.png */,
 				AB4D3D9220FD109A00BC6180 /* LaunchScreen.storyboard */,
 				AB4D3D9520FD109A00BC6180 /* Info.plist */,
 			);
@@ -129,8 +138,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB4D3D9420FD109A00BC6180 /* LaunchScreen.storyboard in Resources */,
+				AB672541210130B1009B1869 /* Rectangle.png in Resources */,
+				AB672543210130BA009B1869 /* timeLabel.png in Resources */,
 				AB4D3D9120FD109A00BC6180 /* Assets.xcassets in Resources */,
 				AB4D3D8F20FD109900BC6180 /* Main.storyboard in Resources */,
+				AB672545210130C1009B1869 /* starStop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,14 +300,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CPT5B7KH8;
 				INFOPLIST_FILE = TikToc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IFF.TikToc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,14 +321,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3CPT5B7KH8;
 				INFOPLIST_FILE = TikToc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = IFF.TikToc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
