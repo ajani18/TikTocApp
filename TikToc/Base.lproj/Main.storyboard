@@ -257,19 +257,25 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="enterP1Name:" destination="H0l-HS-nht" eventType="editingDidEnd" id="H1u-GT-V3l"/>
+                                </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udt-OU-V0a">
-                                <rect key="frame" x="145" y="624" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter Name "/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouG-xT-jgQ">
-                                <rect key="frame" x="16" y="338" width="68" height="21"/>
+                                <rect key="frame" x="16" y="338" width="329" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Udt-OU-V0a">
+                                <rect key="frame" x="145" y="624" width="85" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter Name "/>
+                                <connections>
+                                    <action selector="enterP1Name:" destination="H0l-HS-nht" eventType="touchUpInside" id="EUs-xl-CWF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ndQ-Mz-cd9"/>
@@ -279,6 +285,8 @@
                         <outlet property="HighscoreLbl2" destination="BMo-9e-Mcu" id="c47-u4-OCk"/>
                         <outlet property="ScoreLbl" destination="fyz-51-cLC" id="ZSW-f6-3Pu"/>
                         <outlet property="ScoreLbl2" destination="UVN-4d-qMI" id="Wzg-rK-1CO"/>
+                        <outlet property="player1Name" destination="lEc-hJ-AMD" id="9P6-ud-Kog"/>
+                        <outlet property="player1NameTag" destination="ouG-xT-jgQ" id="Vcy-0X-lky"/>
                         <outlet property="reset" destination="BSP-6d-8Up" id="xaH-Dj-EtK"/>
                         <outlet property="reset2" destination="cFu-0v-RYj" id="dnc-97-MCz"/>
                         <outlet property="start" destination="g3E-K4-xYS" id="7PX-dJ-Kcw"/>

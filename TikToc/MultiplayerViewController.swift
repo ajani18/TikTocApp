@@ -12,14 +12,15 @@ class MultiplayerViewController: UIViewController {
     
     //Player 1 Name Tag
     
-    @IBOutlet weak var player1NameTag: UITextField!
+ 
+    @IBOutlet weak var player1NameTag: UILabel!
     
-    @IBOutlet weak var player1Name: UILabel!
+    @IBOutlet weak var player1Name: UITextField!
     
     @IBAction func enterP1Name(_ sender: Any) {
-        player1Name.text = "Player 1: " + (player1NameTag.text)!
+        player1NameTag.text = "Player 1: " + (player1Name.text)!
+        
     }
-    
     
     //Player 1 Varaibles
     
@@ -56,6 +57,8 @@ class MultiplayerViewController: UIViewController {
     @IBOutlet weak var reset2: UIButton!
     
     @IBOutlet weak var HighscoreLbl2: UILabel!
+    
+    //Winner
     
     
     //Player 1 Actions
@@ -168,6 +171,7 @@ class MultiplayerViewController: UIViewController {
 
         reset2.isEnabled = true
         start2.isEnabled = false
+        
 
     }
     
@@ -185,12 +189,7 @@ class MultiplayerViewController: UIViewController {
         
 
         start2.isEnabled = false
-        
 
-        
-        
-
-        
     }
     
     override func viewDidLoad() {
