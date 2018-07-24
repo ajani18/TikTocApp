@@ -12,7 +12,6 @@ class MultiplayerViewController: UIViewController {
     
     //Player 1 Name Tag
     
- 
     @IBOutlet weak var player1NameTag: UILabel!
     
     @IBOutlet weak var player1Name: UITextField!
@@ -20,6 +19,17 @@ class MultiplayerViewController: UIViewController {
     @IBAction func enterP1Name(_ sender: Any) {
         player1NameTag.text = "Player 1: " + (player1Name.text)!
         
+    }
+    
+    //Player 2 Name Tag
+    
+    @IBOutlet weak var enterPlayer2Name: UIButton!
+    @IBOutlet weak var player2Label: UILabel!
+    
+    @IBOutlet weak var player2TextField: UITextField!
+    
+    @IBAction func enterP2Name(_ sender: Any) {
+        player2Label.text = "Player 2: " + (player2TextField.text)!
     }
     
     //Player 1 Varaibles
@@ -60,6 +70,7 @@ class MultiplayerViewController: UIViewController {
     
     //Winner
     
+    @IBOutlet weak var winnerLabel: UILabel!
     
     //Player 1 Actions
     
@@ -172,6 +183,13 @@ class MultiplayerViewController: UIViewController {
         reset2.isEnabled = true
         start2.isEnabled = false
         
+        if (Score < Score2){
+            winnerLabel.isHidden = false
+            winnerLabel.text = "Player 1 Has Won the Game"
+        } else if (Score2  < Score) {
+            winnerLabel.isHidden = false
+            winnerLabel.text = "Player 2 Has Won the Game"
+        }
 
     }
     
@@ -205,6 +223,20 @@ class MultiplayerViewController: UIViewController {
 //
 //        start2.isEnabled = false
 //
+        winnerLabel.isHidden = true
+        winnerLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+        
+        start2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        stop2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        reset2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+        ScoreLbl2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        HighscoreLbl2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+        player2Label.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        player2TextField.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        enterPlayer2Name.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
         stop.isHidden = true
         stop2.isHidden = true
         

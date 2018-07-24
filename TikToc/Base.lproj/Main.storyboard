@@ -276,6 +276,35 @@
                                     <action selector="enterP1Name:" destination="H0l-HS-nht" eventType="touchUpInside" id="EUs-xl-CWF"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="At7-Wh-yV2">
+                                <rect key="frame" x="190" y="323" width="311" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 2:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEt-SI-8EP">
+                                <rect key="frame" x="16" y="298" width="329" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gKn-fU-0tW">
+                                <rect key="frame" x="232" y="84" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Mr-GC-iFp">
+                                <rect key="frame" x="140" y="84" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Enter Name"/>
+                                <connections>
+                                    <action selector="enterP2Name:" destination="H0l-HS-nht" eventType="touchUpInside" id="MR8-by-zaN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ndQ-Mz-cd9"/>
@@ -285,14 +314,18 @@
                         <outlet property="HighscoreLbl2" destination="BMo-9e-Mcu" id="c47-u4-OCk"/>
                         <outlet property="ScoreLbl" destination="fyz-51-cLC" id="ZSW-f6-3Pu"/>
                         <outlet property="ScoreLbl2" destination="UVN-4d-qMI" id="Wzg-rK-1CO"/>
+                        <outlet property="enterPlayer2Name" destination="1Mr-GC-iFp" id="MNu-qo-ZIk"/>
                         <outlet property="player1Name" destination="lEc-hJ-AMD" id="9P6-ud-Kog"/>
                         <outlet property="player1NameTag" destination="ouG-xT-jgQ" id="Vcy-0X-lky"/>
+                        <outlet property="player2Label" destination="NEt-SI-8EP" id="Mkx-Cq-lVS"/>
+                        <outlet property="player2TextField" destination="gKn-fU-0tW" id="heG-6c-S7T"/>
                         <outlet property="reset" destination="BSP-6d-8Up" id="xaH-Dj-EtK"/>
                         <outlet property="reset2" destination="cFu-0v-RYj" id="dnc-97-MCz"/>
                         <outlet property="start" destination="g3E-K4-xYS" id="7PX-dJ-Kcw"/>
                         <outlet property="start2" destination="MWa-oC-ZYT" id="5VI-11-2P2"/>
                         <outlet property="stop" destination="1ZN-VB-hqC" id="gXI-lS-e0F"/>
                         <outlet property="stop2" destination="zlm-IS-mkC" id="iLJ-Ek-1qT"/>
+                        <outlet property="winnerLabel" destination="At7-Wh-yV2" id="1ip-H5-oWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoT-U4-sN7" userLabel="First Responder" sceneMemberID="firstResponder"/>
