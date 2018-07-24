@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MultiplayerViewController: UIViewController {
+class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     
     //Player 1 Name Tag
     
@@ -18,6 +18,14 @@ class MultiplayerViewController: UIViewController {
     
     @IBAction func enterP1Name(_ sender: Any) {
         player1NameTag.text = "Player 1: " + (player1Name.text)!
+        
+        start.isEnabled = false
+        stop.isEnabled = false
+        reset.isEnabled = false
+        
+        start2.isEnabled = false
+        stop2.isEnabled = false
+        reset.isEnabled = false
         
     }
     
@@ -30,6 +38,11 @@ class MultiplayerViewController: UIViewController {
     
     @IBAction func enterP2Name(_ sender: Any) {
         player2Label.text = "Player 2: " + (player2TextField.text)!
+        
+        start.isEnabled = true
+        reset.isEnabled = true
+        stop.isEnabled = false
+        
     }
     
     //Player 1 Varaibles
@@ -79,6 +92,8 @@ class MultiplayerViewController: UIViewController {
 
         start.isHidden = true
         stop.isHidden = false
+        
+        stop.isEnabled = true
         
         reset.isEnabled = false
 
@@ -185,10 +200,10 @@ class MultiplayerViewController: UIViewController {
         
         if (Score < Score2){
             winnerLabel.isHidden = false
-            winnerLabel.text = "Player 1 Has Won the Game"
+            winnerLabel.text = (player1Name.text)! + "Has Won the Game"
         } else if (Score2  < Score) {
             winnerLabel.isHidden = false
-            winnerLabel.text = "Player 2 Has Won the Game"
+            winnerLabel.text = (player2TextField.text)! + "Has Won the Game"
         }
 
     }
@@ -207,22 +222,28 @@ class MultiplayerViewController: UIViewController {
         
 
         start2.isEnabled = false
+        
+        winnerLabel.isHidden = true
 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        player2TextField.delegate = self
+        player1Name.delegate = self
 
         // Do any additional setup after loading the view.
         
-//        stop.isEnabled = false
-//        stop2.isEnabled = false
-//
-//        reset.isEnabled = false
-//        reset2.isEnabled = false
-//
-//        start2.isEnabled = false
-//
         winnerLabel.isHidden = true
         winnerLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
         
@@ -249,12 +270,20 @@ class MultiplayerViewController: UIViewController {
         if (HighscoreDefault2.value(forKey: "Highscore2") != nil) {
             highScore = HighscoreDefault2.value(forKey: "Highscore2") as! Int
             HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
+            
+        start2.isEnabled = false
+        reset2.isEnabled = false
+            
+        start.isEnabled = false
+        reset.isEnabled = false
     }
+            
 
         func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+            
     
 
     /*
