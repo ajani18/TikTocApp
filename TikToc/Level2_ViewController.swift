@@ -1,14 +1,14 @@
 //
-//  Levels_ViewController.swift
+//  Level2_ViewController.swift
 //  TikToc
 //
-//  Created by Abhi Jani on 7/24/18.
+//  Created by Abhi Jani on 7/25/18.
 //  Copyright © 2018 Abhi Jani. All rights reserved.
 //
 
 import UIKit
 
-class Levels_ViewController: UIViewController {
+class Level2_ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

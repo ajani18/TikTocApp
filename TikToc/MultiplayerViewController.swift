@@ -200,7 +200,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         if (Score < Score2){
             winnerLabel.isHidden = false
-            winnerLabel.text = (player1Name.text)! + "Has Won the Game"
+            winnerLabel.text = (player1Name.text)! + " Has Won the Game"
         } else if (Score2  < Score) {
             winnerLabel.isHidden = false
             winnerLabel.text = (player2TextField.text)! + "Has Won the Game"

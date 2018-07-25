@@ -16,6 +16,8 @@
 		AB672541210130B1009B1869 /* Rectangle.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672540210130B1009B1869 /* Rectangle.png */; };
 		AB672543210130BA009B1869 /* timeLabel.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672542210130BA009B1869 /* timeLabel.png */; };
 		AB672545210130C1009B1869 /* starStop.png in Resources */ = {isa = PBXBuildFile; fileRef = AB672544210130C1009B1869 /* starStop.png */; };
+		AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6725482107C5A9009B1869 /* Level1_ViewController.swift */; };
+		AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB67254A2108DD35009B1869 /* Level2_ViewController.swift */; };
 		AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +33,8 @@
 		AB672540210130B1009B1869 /* Rectangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rectangle.png; path = ../../Rectangle.png; sourceTree = "<group>"; };
 		AB672542210130BA009B1869 /* timeLabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = timeLabel.png; path = ../../timeLabel.png; sourceTree = "<group>"; };
 		AB672544210130C1009B1869 /* starStop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = starStop.png; path = ../../starStop.png; sourceTree = "<group>"; };
+		AB6725482107C5A9009B1869 /* Level1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1_ViewController.swift; sourceTree = "<group>"; };
+		AB67254A2108DD35009B1869 /* Level2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2_ViewController.swift; sourceTree = "<group>"; };
 		AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +72,9 @@
 				AB4D3D9D20FD125A00BC6180 /* GeneralModeViewController.swift */,
 				AB4D3D8B20FD109900BC6180 /* ViewController.swift */,
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
+				AB6725482107C5A9009B1869 /* Level1_ViewController.swift */,
 				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
+				AB67254A2108DD35009B1869 /* Level2_ViewController.swift */,
 				AB4D3D9020FD109A00BC6180 /* Assets.xcassets */,
 				AB672544210130C1009B1869 /* starStop.png */,
 				AB672542210130BA009B1869 /* timeLabel.png */,
@@ -153,7 +159,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */,
 				AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */,
+				AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */,
 				AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */,
 				AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */,
 				AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */,
