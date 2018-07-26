@@ -200,10 +200,11 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         if (Score < Score2){
             winnerLabel.isHidden = false
-            winnerLabel.text = (player1Name.text)! + " Has Won the Game"
+            winnerLabel.text = (player1Name.text)! + " was ." + String(Score2-Score) + " seconds faster"
         } else if (Score2  < Score) {
             winnerLabel.isHidden = false
-            winnerLabel.text = (player2TextField.text)! + "Has Won the Game"
+            winnerLabel.text = (player2TextField.text)! + " was ." + String(Score-Score2) + " seconds faster"
+            
         }
 
     }
@@ -238,6 +239,8 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        player2Label.isHidden = false
         
         player2TextField.delegate = self
         player1Name.delegate = self

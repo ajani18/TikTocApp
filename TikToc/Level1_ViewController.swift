@@ -26,9 +26,6 @@ class Level1_ViewController: UIViewController {
     
     @IBOutlet weak var highScoreLvl1: UILabel!
     
-    @IBOutlet weak var StartActionLevel1: UIButton!
-    
-    
     @IBAction func StartActionLevel1(_ sender: Any) {
         //Schedule a timer
         timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Level1_ViewController.updateCountdown), userInfo: nil, repeats: true)
@@ -85,7 +82,7 @@ class Level1_ViewController: UIViewController {
         resetLvl1.isEnabled = true
         startLvl1.isEnabled = false
         
-        if (Highscore123 < 60){
+        if (Highscore123 < 15){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
         } else {
@@ -114,7 +111,7 @@ class Level1_ViewController: UIViewController {
         
         resetLvl1.isEnabled = false
         
-        if (Highscore123 < 60){
+        if (Highscore123 < 15){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
         } else {
