@@ -27,12 +27,28 @@ class Level2_ViewController: UIViewController {
     @IBOutlet weak var nextBtnLvl2: UIButton!
     
     @IBAction func StartActionLvl2(_ sender: Any) {
-                timer = Timer.scheduledTimer(timeInterval: 0.00001, target: self, selector: #selector(Level2_ViewController.updateCountdown), userInfo: nil, repeats: true)
+                timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Level2_ViewController.updateCountdown), userInfo: nil, repeats: true)
         
         startLvl2.isHidden = true
         stopLvl2.isHidden = false
         
         resetLvl2.isEnabled = false
+        
+        let buttonWidth = stopLvl2.frame.width
+        let buttonHeight = stopLvl2.frame.height
+        
+        let viewWidth = stopLvl2.superview!.bounds.width
+        let viewHeight = stopLvl2.superview!.bounds.width
+        
+        let xWidth = viewWidth - buttonWidth
+        let yHeight = viewHeight - buttonHeight
+        
+        let xoffset = CGFloat(arc4random_uniform(UInt32(xWidth)))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(yHeight)))
+        
+        stopLvl2.center.x = xoffset + buttonWidth / 2
+        stopLvl2.center.y = yoffset + buttonHeight / 2
+        
     }
     
     @objc func updateCountdown() {
@@ -66,7 +82,7 @@ class Level2_ViewController: UIViewController {
         resetLvl2.isEnabled = true
         startLvl2.isEnabled = false
         
-        if (Highscorelvl2 < 60){
+        if (Highscorelvl2 < 50){
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
         } else {
@@ -108,7 +124,7 @@ class Level2_ViewController: UIViewController {
         
         resetLvl2.isEnabled = false
         
-        if (Highscorelvl2 < 60){
+        if (Highscorelvl2 < 50){
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
         } else {

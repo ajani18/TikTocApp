@@ -82,7 +82,7 @@ class Level1_ViewController: UIViewController {
         resetLvl1.isEnabled = true
         startLvl1.isEnabled = false
         
-        if (Highscore123 < 15){
+        if (Highscore123 < 20){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
         } else {
@@ -111,7 +111,7 @@ class Level1_ViewController: UIViewController {
         
         resetLvl1.isEnabled = false
         
-        if (Highscore123 < 15){
+        if (Highscore123 < 20){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
         } else {
