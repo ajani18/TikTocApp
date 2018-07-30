@@ -26,6 +26,13 @@ class Level2_ViewController: UIViewController {
     
     @IBOutlet weak var nextBtnLvl2: UIButton!
     
+    @IBAction func TutorialLvl2(_ sender: Any) {
+        
+        createAlert(title: "Level 2 Tutorial", message: "You Have Be Quick On the Level as the Stop Button Will Appear Randomly")
+        
+    }
+    
+    
     @IBAction func StartActionLvl2(_ sender: Any) {
                 timer = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Level2_ViewController.updateCountdown), userInfo: nil, repeats: true)
         
@@ -85,6 +92,19 @@ class Level2_ViewController: UIViewController {
         if (Highscorelvl2 < 50){
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
+            
+//            nextBtnLvl2.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+//            
+//            UIView.animate(withDuration: 2.0,
+//                           delay: 0,
+//                           usingSpringWithDamping: 0.2,
+//                           initialSpringVelocity: 6.0,
+//                           options: .allowUserInteraction,
+//                           animations: { [weak self] in
+//                            self?.nextBtnLvl2.transform = .identity
+//                },
+//                           completion: nil)
+            
         } else {
             nextBtnLvl2.isHidden = true
             nextBtnLvl2.isEnabled = false
@@ -124,9 +144,22 @@ class Level2_ViewController: UIViewController {
         
         resetLvl2.isEnabled = false
         
-        if (Highscorelvl2 < 50){
+        if (Highscorelvl2 < 50){ //1.09-1=.09 = 9 + 60 = 69
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
+            
+//            nextBtnLvl2.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+//            UIView.animate(withDuration: 2.0,
+//                           delay: 0,
+//                           usingSpringWithDamping: 0.2,
+//                           initialSpringVelocity: 6.0,
+//                           options: .allowUserInteraction,
+//                           animations: { [weak self] in
+//                            self?.nextBtnLvl2.transform = .identity
+//                },
+//                           completion: nil)
+
         } else {
             nextBtnLvl2.isHidden = true
             nextBtnLvl2.isEnabled = false
@@ -140,6 +173,15 @@ class Level2_ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 
     /*
     // MARK: - Navigation

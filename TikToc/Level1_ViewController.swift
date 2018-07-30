@@ -82,9 +82,21 @@ class Level1_ViewController: UIViewController {
         resetLvl1.isEnabled = true
         startLvl1.isEnabled = false
         
-        if (Highscore123 < 20){
+        if (Highscore123 < 50){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
+            
+//            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+//            
+//            UIView.animate(withDuration: 2.0,
+//                           delay: 0,
+//                           usingSpringWithDamping: 0.2,
+//                           initialSpringVelocity: 6.0,
+//                           options: .allowUserInteraction,
+//                           animations: { [weak self] in
+//                            self?.NextBtn.transform = .identity
+//                },
+//                           completion: nil)
         } else {
             NextBtn.isHidden = true
             NextBtn.isEnabled = false
@@ -114,6 +126,18 @@ class Level1_ViewController: UIViewController {
         if (Highscore123 < 20){
             NextBtn.isHidden = false
             NextBtn.isEnabled = true
+            
+//            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+//            
+//            UIView.animate(withDuration: 2.0,
+//                           delay: 0,
+//                           usingSpringWithDamping: 0.2,
+//                           initialSpringVelocity: 6.0,
+//                           options: .allowUserInteraction,
+//                           animations: { [weak self] in
+//                            self?.NextBtn.transform = .identity
+//                },
+//                           completion: nil)
         } else {
             NextBtn.isHidden = true
             NextBtn.isEnabled = false

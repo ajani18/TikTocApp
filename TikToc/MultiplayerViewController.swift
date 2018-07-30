@@ -200,10 +200,10 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         if (Score < Score2){
             winnerLabel.isHidden = false
-            winnerLabel.text = (player1Name.text)! + " was ." + String(Score2-Score) + " seconds faster"
+            winnerLabel.text = (player1Name.text)! + " was " + String((Score2-Score)/100) + " seconds faster"
         } else if (Score2  < Score) {
             winnerLabel.isHidden = false
-            winnerLabel.text = (player2TextField.text)! + " was ." + String(Score-Score2) + " seconds faster"
+            winnerLabel.text = (player2TextField.text)! + " was ." + String((Score-Score2)/100) + " seconds faster"
             
         }
 

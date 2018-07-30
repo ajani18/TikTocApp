@@ -19,6 +19,9 @@
 		AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6725482107C5A9009B1869 /* Level1_ViewController.swift */; };
 		AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB67254A2108DD35009B1869 /* Level2_ViewController.swift */; };
 		AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */; };
+		ABF1FBAE210F759200AF5DC7 /* Level3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */; };
+		ABF1FBB0210F7A8F00AF5DC7 /* Level4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */; };
+		ABF1FBB2210F7F2000AF5DC7 /* Level5_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		AB6725482107C5A9009B1869 /* Level1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1_ViewController.swift; sourceTree = "<group>"; };
 		AB67254A2108DD35009B1869 /* Level2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2_ViewController.swift; sourceTree = "<group>"; };
 		AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
+		ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3_ViewController.swift; sourceTree = "<group>"; };
+		ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4_ViewController.swift; sourceTree = "<group>"; };
+		ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +79,11 @@
 				AB4D3D8B20FD109900BC6180 /* ViewController.swift */,
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
 				AB6725482107C5A9009B1869 /* Level1_ViewController.swift */,
-				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
 				AB67254A2108DD35009B1869 /* Level2_ViewController.swift */,
+				ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */,
+				ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */,
+				ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */,
+				AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */,
 				AB4D3D9020FD109A00BC6180 /* Assets.xcassets */,
 				AB672544210130C1009B1869 /* starStop.png */,
 				AB672542210130BA009B1869 /* timeLabel.png */,
@@ -159,10 +168,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF1FBB0210F7A8F00AF5DC7 /* Level4_ViewController.swift in Sources */,
 				AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */,
 				AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */,
 				AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */,
 				AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */,
+				ABF1FBB2210F7F2000AF5DC7 /* Level5_ViewController.swift in Sources */,
+				ABF1FBAE210F759200AF5DC7 /* Level3_ViewController.swift in Sources */,
 				AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */,
 				AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */,
 			);
