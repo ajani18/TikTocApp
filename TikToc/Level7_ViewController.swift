@@ -1,5 +1,5 @@
 //
-//  Level5_ViewController.swift
+//  Level7_ViewController.swift
 //  TikToc
 //
 //  Created by Abhi Jani on 7/30/18.
@@ -8,65 +8,50 @@
 
 import UIKit
 
-class Level5_ViewController: UIViewController {
+class Level7_ViewController: UIViewController {
     
-    var timer5 = Timer()
-    var Score123 = 0
-    var Highscore12356 = 100000000000
-
-    @IBOutlet weak var ScoreLblLvl5: UILabel!
+    var timer7 = Timer()
+    var Score7 = 0
+    var Highscore7 = 100000000000
     
-    @IBOutlet weak var StartLblLvl4: UIButton!
+    @IBOutlet weak var ScoreLblLvl7: UILabel!
     
-    @IBOutlet weak var StopLvl5: UIButton!
+    @IBOutlet weak var StartLvl7: UIButton!
     
-    @IBOutlet weak var ResetLvl5: UIButton!
+    @IBOutlet weak var StopLvl7: UIButton!
     
-    @IBOutlet weak var nextBtnLvl5: UIButton!
+    @IBOutlet weak var ResetLvl7: UIButton!
     
-    @IBOutlet weak var HighScoreLblLvl5: UILabel!
+    @IBOutlet weak var HighScoreLblLvl7: UILabel!
     
-    @IBAction func StartActionlvl5(_ sender: Any) {
-        timer5 = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Level5_ViewController.updateCountdown), userInfo: nil, repeats: true)
+    @IBOutlet weak var nextBtnLvl7: UIButton!
+    
+    @IBAction func StartActionLvl7(_ sender: Any) {
+        timer7 = Timer.scheduledTimer(timeInterval: 0.01, target: self, selector: #selector(Level7_ViewController.updateCountdown), userInfo: nil, repeats: true)
         
-        StartLblLvl4.isHidden = true
-        StopLvl5.isHidden = false
+        StartLvl7.isHidden = true
+        StopLvl7.isHidden = false
         
-        ResetLvl5.isEnabled = false
-
+        ResetLvl7.isEnabled = false
         
     }
     
     @objc func updateCountdown() {
-        Score123 += 1
+        Score7 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl5.text! = String(format: "%02d:%02d:%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+        ScoreLblLvl7.text! = String(format: "%02d:%02d:%02d", Score7 / 3600, (Score7 % 3600) / 60, (Score7 % 3600) % 60)
         
     }
     
-    @IBAction func ResetActionLvl5(_ sender: Any) {
-        Score123 = 0
-        StopActionLvl5(sender)
-        ScoreLblLvl5.text! = String(format: "%02d:%02d:%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+    @IBAction func StopActionLvl7(_ sender: Any) {
+        timer7.invalidate()
         
-        StopLvl5.isHidden = true
-        StartLblLvl4.isHidden = false
-        
-        ResetLvl5.isEnabled = false
-        
-        StartLblLvl4.isEnabled = true
-    }
-    
-    
-    @IBAction func StopActionLvl5(_ sender: Any) {
-        timer5.invalidate()
-        
-        if ((Highscore12356 > Score123) && (Score123 != 0))  {
-            Highscore12356 = Score123
-            HighScoreLblLvl5.text = String(format: "%02d:%02d:%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+        if ((Highscore7 > Score7) && (Score7 != 0))  {
+            Highscore7 = Score7
+            HighScoreLblLvl7.text = String(format: "%02d:%02d:%02d", Highscore7 / 3600, (Highscore7 % 3600) / 60, (Highscore7 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
-            HighscoreDefault.set(Highscore12356, forKey: "Highscore123456")
+            HighscoreDefault.set(Highscore7, forKey: "Highscore123489")
             HighscoreDefault.synchronize()
         }
         else {
@@ -76,15 +61,15 @@ class Level5_ViewController: UIViewController {
         //        let HighScore123 = Double(Highscore123)
         
         
-        StartLblLvl4.isHidden = false
-        StopLvl5.isHidden = true
+        StartLvl7.isHidden = false
+        StopLvl7.isHidden = true
         
-        ResetLvl5.isEnabled = true
-        StartLblLvl4.isEnabled = false
+        ResetLvl7.isEnabled = true
+        StartLvl7.isEnabled = false
         
-        if (Highscore12356 < 50){
-            nextBtnLvl5.isHidden = false
-            nextBtnLvl5.isEnabled = true
+        if (Highscore7 < 80){
+            nextBtnLvl7.isHidden = false
+            nextBtnLvl7.isEnabled = true
             
             //            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             //
@@ -98,9 +83,24 @@ class Level5_ViewController: UIViewController {
             //                },
             //                           completion: nil)
         } else {
-            nextBtnLvl5.isHidden = true
-            nextBtnLvl5.isEnabled = false
+            nextBtnLvl7.isHidden = true
+            nextBtnLvl7.isEnabled = false
         }
+        
+        
+    }
+    
+    @IBAction func ResetActionLvl7(_ sender: Any) {
+        Score7 = 0
+        StopActionLvl7(sender)
+        ScoreLblLvl7.text! = String(format: "%02d:%02d:%02d", Score7 / 3600, (Score7 % 3600) / 60, (Score7 % 3600) % 60)
+        
+        StopLvl7.isHidden = true
+        StartLvl7.isHidden = false
+        
+        ResetLvl7.isEnabled = false
+        
+        StartLvl7.isEnabled = true
         
     }
     
@@ -108,20 +108,20 @@ class Level5_ViewController: UIViewController {
         super.viewDidLoad()
         
         let HighscoreDefault = UserDefaults.standard
-        if (HighscoreDefault.value(forKey: "Highscore123456") != nil) {
-            Highscore12356 = HighscoreDefault.value(forKey: "Highscore123456") as! Int
-            HighScoreLblLvl5.text = String(format: "%02d:%02d:%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+        if (HighscoreDefault.value(forKey: "Highscore123489") != nil) {
+            Highscore7 = HighscoreDefault.value(forKey: "Highscore123489") as! Int
+            HighScoreLblLvl7.text = String(format: "%02d:%02d:%02d", Highscore7 / 3600, (Highscore7 % 3600) / 60, (Highscore7 % 3600) % 60)
             
         }
         
-        StartLblLvl4.isHidden = false
-        StopLvl5.isHidden = true
+        StartLvl7.isHidden = false
+        StopLvl7.isHidden = true
         
-        ResetLvl5.isEnabled = false
+        ResetLvl7.isEnabled = false
         
-        if (Highscore12356 < 50){
-            nextBtnLvl5.isHidden = false
-            nextBtnLvl5.isEnabled = true
+        if (Highscore7 < 80){
+            nextBtnLvl7.isHidden = false
+            nextBtnLvl7.isEnabled = true
             
             //            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
             //
@@ -135,8 +135,8 @@ class Level5_ViewController: UIViewController {
             //                },
             //                           completion: nil)
         } else {
-            nextBtnLvl5.isHidden = true
-            nextBtnLvl5.isEnabled = false
+            nextBtnLvl7.isHidden = true
+            nextBtnLvl7.isEnabled = false
         }
         
 

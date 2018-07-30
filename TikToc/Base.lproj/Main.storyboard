@@ -92,50 +92,62 @@
                                 <rect key="frame" x="0.0" y="106" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="75"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-lb-5bR">
-                                <rect key="frame" x="141" y="549" width="268" height="118"/>
+                                <rect key="frame" x="53" y="48" width="268" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-lp-N9H">
-                                <rect key="frame" x="70" y="390" width="34" height="30"/>
+                                <rect key="frame" x="0.0" y="457" width="375" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Start"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="StartActionLvl3:" destination="Pz4-ub-Lgt" eventType="touchUpInside" id="14b-RV-8l6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-Rp-7iF">
-                                <rect key="frame" x="282" y="390" width="39" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-dm-vfR">
+                                <rect key="frame" x="0.0" y="457" width="375" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Reset"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopActionLvl3:" destination="Pz4-ub-Lgt" eventType="touchUpInside" id="tvb-pC-rWo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-Rp-7iF">
+                                <rect key="frame" x="0.0" y="566" width="375" height="101"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="ResetActionLvl3:" destination="Pz4-ub-Lgt" eventType="touchUpInside" id="npj-jg-Ms6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AD3-0Y-cJC">
-                                <rect key="frame" x="71" y="549" width="32" height="30"/>
+                                <rect key="frame" x="0.0" y="348" width="375" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="SF4-gj-DK4" kind="show" id="omP-KT-l83"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfl-dm-vfR">
-                                <rect key="frame" x="171" y="453" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="StopActionLvl3:" destination="Pz4-ub-Lgt" eventType="touchUpInside" id="tvb-pC-rWo"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="UzY-TB-RVy"/>
                     </view>
                     <connections>
@@ -149,7 +161,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHq-bA-iW5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="146" y="1790"/>
+            <point key="canvasLocation" x="144.80000000000001" y="1789.6551724137933"/>
         </scene>
         <!--Level4 View Controller-->
         <scene sceneID="0VR-Jy-etv">
@@ -293,10 +305,10 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="1789.6551724137933"/>
         </scene>
-        <!--View Controller-->
+        <!--Level6 View Controller-->
         <scene sceneID="vaA-AY-KS9">
             <objects>
-                <viewController id="f9c-Yp-ikY" sceneMemberID="viewController">
+                <viewController id="f9c-Yp-ikY" customClass="Level6_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Umx-Do-fPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -305,16 +317,25 @@
                                 <rect key="frame" x="146" y="342" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartActionLvl6:" destination="f9c-Yp-ikY" eventType="touchUpInside" id="CnP-0c-bN0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZp-Sb-TWZ">
                                 <rect key="frame" x="215" y="386" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="StopActionLevel6:" destination="f9c-Yp-ikY" eventType="touchUpInside" id="vC7-MH-arn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9H-YH-5gL">
                                 <rect key="frame" x="49" y="442" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetActionLvl6:" destination="f9c-Yp-ikY" eventType="touchUpInside" id="qpt-tZ-vKp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIg-4g-niP">
                                 <rect key="frame" x="157" y="516" width="32" height="30"/>
@@ -342,15 +363,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZKg-8S-7Ts"/>
                     </view>
+                    <connections>
+                        <outlet property="HighScoreLbl" destination="lCP-Jm-wXN" id="HuR-kx-Lw4"/>
+                        <outlet property="ResetLvl6" destination="c9H-YH-5gL" id="651-09-t7o"/>
+                        <outlet property="ScoreLblLvl6" destination="FgS-bw-Hb6" id="ZA2-kb-WuZ"/>
+                        <outlet property="StartLvl6" destination="R2m-h0-Vqe" id="DTP-WT-gbp"/>
+                        <outlet property="StopLvl6" destination="aZp-Sb-TWZ" id="D9w-Me-eMk"/>
+                        <outlet property="nextBtnLvl6" destination="dIg-4g-niP" id="ZNk-y7-6mn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BT4-Vo-w2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2383" y="1790"/>
         </scene>
-        <!--View Controller-->
+        <!--Level7 View Controller-->
         <scene sceneID="i9f-wC-RWu">
             <objects>
-                <viewController id="HdB-Nz-S41" sceneMemberID="viewController">
+                <viewController id="HdB-Nz-S41" customClass="Level7_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vvT-cZ-Zi9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,11 +388,17 @@
                                 <rect key="frame" x="25" y="358" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartActionLvl7:" destination="HdB-Nz-S41" eventType="touchUpInside" id="Krz-jV-XHv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-Rh-vsu">
                                 <rect key="frame" x="220" y="392" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="StopActionLvl7:" destination="HdB-Nz-S41" eventType="touchUpInside" id="yeo-om-Wyh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWa-pe-Fby">
                                 <rect key="frame" x="34" y="476" width="32" height="46"/>
@@ -377,6 +412,9 @@
                                 <rect key="frame" x="124" y="474" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetActionLvl7:" destination="HdB-Nz-S41" eventType="touchUpInside" id="ZpV-g6-V56"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vyk-xF-FHO">
                                 <rect key="frame" x="164" y="570" width="268" height="118"/>
@@ -396,15 +434,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="y67-m0-zlC"/>
                     </view>
+                    <connections>
+                        <outlet property="HighScoreLblLvl7" destination="vyk-xF-FHO" id="b6z-dd-xja"/>
+                        <outlet property="ResetLvl7" destination="J1B-D0-tvx" id="pqI-No-xLE"/>
+                        <outlet property="ScoreLblLvl7" destination="UWQ-da-KTk" id="zze-wV-O60"/>
+                        <outlet property="StartLvl7" destination="aIP-cX-k1s" id="Fbw-pM-1st"/>
+                        <outlet property="StopLvl7" destination="uzd-Rh-vsu" id="jOR-8k-XyV"/>
+                        <outlet property="nextBtnLvl7" destination="vWa-pe-Fby" id="9M6-w2-fSG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZbE-6K-Ect" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3149.5999999999999" y="1790.5547226386807"/>
         </scene>
-        <!--View Controller-->
+        <!--Level8 View Controller-->
         <scene sceneID="3ip-xX-DL9">
             <objects>
-                <viewController id="rDG-VA-Rxr" sceneMemberID="viewController">
+                <viewController id="rDG-VA-Rxr" customClass="Level8_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHT-hv-nhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -420,16 +466,25 @@
                                 <rect key="frame" x="104" y="318" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartActionLvl8:" destination="rDG-VA-Rxr" eventType="touchUpInside" id="7iO-7j-Upg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dN-qM-fvx">
                                 <rect key="frame" x="157" y="380" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="StopActionLvl8:" destination="rDG-VA-Rxr" eventType="touchUpInside" id="bDL-oI-mYh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TW1-3o-VQ4">
                                 <rect key="frame" x="79" y="482" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetActionLvl8:" destination="rDG-VA-Rxr" eventType="touchUpInside" id="hsJ-tI-wGQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyf-0u-agD">
                                 <rect key="frame" x="189" y="482" width="32" height="46"/>
@@ -450,15 +505,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="3tG-4v-jQ9"/>
                     </view>
+                    <connections>
+                        <outlet property="HighScoreLbl8" destination="hi5-Ta-WuR" id="ERU-PO-8mV"/>
+                        <outlet property="ResetLvl8" destination="TW1-3o-VQ4" id="KKC-Su-F9c"/>
+                        <outlet property="ScoreLblLvl8" destination="JRo-23-fUT" id="5Di-Je-JRZ"/>
+                        <outlet property="StartLvl8" destination="YyQ-dr-cFz" id="sf5-3l-Pym"/>
+                        <outlet property="StopLvl8" destination="4dN-qM-fvx" id="R3y-aa-fHa"/>
+                        <outlet property="nextBtn8" destination="eyf-0u-agD" id="KRp-Oa-w9N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSr-SC-iWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3855" y="1789"/>
+            <point key="canvasLocation" x="3853.5999999999999" y="1788.7556221889056"/>
         </scene>
-        <!--View Controller-->
+        <!--Level9 View Controller-->
         <scene sceneID="7ta-Xh-1FQ">
             <objects>
-                <viewController id="5Jv-ud-1L4" sceneMemberID="viewController">
+                <viewController id="5Jv-ud-1L4" customClass="Level9_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="REm-Cv-W2S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -474,16 +537,25 @@
                                 <rect key="frame" x="64" y="332" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="StartAction9:" destination="5Jv-ud-1L4" eventType="touchUpInside" id="mpi-Gh-Kwn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OS-9l-LQv">
                                 <rect key="frame" x="199" y="424" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="StopAction9:" destination="5Jv-ud-1L4" eventType="touchUpInside" id="TFp-ZR-HBP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zz-sO-qed">
                                 <rect key="frame" x="57" y="464" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetAction9:" destination="5Jv-ud-1L4" eventType="touchUpInside" id="Fpx-Tc-wp2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yrB-7O-otm">
                                 <rect key="frame" x="269" y="322" width="32" height="46"/>
@@ -491,7 +563,7 @@
                                 <state key="normal" title="Next"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAG-c7-XfF">
-                                <rect key="frame" x="165" y="564" width="268" height="118"/>
+                                <rect key="frame" x="199" y="529" width="268" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
                                 <nil key="textColor"/>
@@ -501,6 +573,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bIE-Ya-6Vl"/>
                     </view>
+                    <connections>
+                        <outlet property="HighScore9" destination="ZAG-c7-XfF" id="Zh4-T6-CNh"/>
+                        <outlet property="Next9" destination="yrB-7O-otm" id="LOo-KG-Z9a"/>
+                        <outlet property="Reset9" destination="6Zz-sO-qed" id="BZi-wr-M3Y"/>
+                        <outlet property="ScoreLbl9" destination="6kc-oz-wZ3" id="Sk9-kp-vAI"/>
+                        <outlet property="Start9" destination="ruH-TY-EEu" id="QNc-Fs-M8h"/>
+                        <outlet property="Stop9" destination="1OS-9l-LQv" id="JI4-Ad-asu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvB-jB-fyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
