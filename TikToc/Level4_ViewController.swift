@@ -66,7 +66,7 @@ class Level4_ViewController: UIViewController {
         ResetLvl4.isEnabled = true
         StartLvl4.isEnabled = false
         
-        if (Highscore4 < 50){
+        if (Highscore4 < 35){
             nextBtnLvl4.isHidden = false
             nextBtnLvl4.isEnabled = true
             
@@ -119,7 +119,7 @@ class Level4_ViewController: UIViewController {
         
         ResetLvl4.isEnabled = false
         
-        if (Highscore4 < 50){
+        if (Highscore4 < 35){
             nextBtnLvl4.isHidden = false
             nextBtnLvl4.isEnabled = true
             

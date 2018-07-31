@@ -89,7 +89,7 @@ class Level2_ViewController: UIViewController {
         resetLvl2.isEnabled = true
         startLvl2.isEnabled = false
         
-        if (Highscorelvl2 < 50){
+        if (Highscorelvl2 < 120){
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
             
@@ -144,7 +144,7 @@ class Level2_ViewController: UIViewController {
         
         resetLvl2.isEnabled = false
         
-        if (Highscorelvl2 < 50){ //1.09-1=.09 = 9 + 60 = 69
+        if (Highscorelvl2 < 120){ //1.09-1=.09 = 9 + 60 = 69
             nextBtnLvl2.isHidden = false
             nextBtnLvl2.isEnabled = true
             

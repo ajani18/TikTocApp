@@ -67,7 +67,7 @@ class Level7_ViewController: UIViewController {
         ResetLvl7.isEnabled = true
         StartLvl7.isEnabled = false
         
-        if (Highscore7 < 80){
+        if (Highscore7 < 20){
             nextBtnLvl7.isHidden = false
             nextBtnLvl7.isEnabled = true
             
@@ -119,7 +119,7 @@ class Level7_ViewController: UIViewController {
         
         ResetLvl7.isEnabled = false
         
-        if (Highscore7 < 80){
+        if (Highscore7 < 20){
             nextBtnLvl7.isHidden = false
             nextBtnLvl7.isEnabled = true
             

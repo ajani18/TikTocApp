@@ -82,7 +82,7 @@ class Level5_ViewController: UIViewController {
         ResetLvl5.isEnabled = true
         StartLblLvl4.isEnabled = false
         
-        if (Highscore12356 < 50){
+        if (Highscore12356 < 90){
             nextBtnLvl5.isHidden = false
             nextBtnLvl5.isEnabled = true
             
@@ -119,7 +119,7 @@ class Level5_ViewController: UIViewController {
         
         ResetLvl5.isEnabled = false
         
-        if (Highscore12356 < 50){
+        if (Highscore12356 < 90){
             nextBtnLvl5.isHidden = false
             nextBtnLvl5.isEnabled = true
             

@@ -67,7 +67,7 @@ class Level8_ViewController: UIViewController {
         ResetLvl8.isEnabled = true
         StartLvl8.isEnabled = false
         
-        if (Highscore8 < 50){
+        if (Highscore8 < 60){
             nextBtn8.isHidden = false
             nextBtn8.isEnabled = true
 
@@ -108,7 +108,7 @@ class Level8_ViewController: UIViewController {
         
         ResetLvl8.isEnabled = false
         
-        if (Highscore8 < 50){
+        if (Highscore8 < 60){
             nextBtn8.isHidden = false
             nextBtn8.isEnabled = true
             
