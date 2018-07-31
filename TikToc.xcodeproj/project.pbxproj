@@ -19,13 +19,13 @@
 		AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6725482107C5A9009B1869 /* Level1_ViewController.swift */; };
 		AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB67254A2108DD35009B1869 /* Level2_ViewController.swift */; };
 		AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */; };
-		ABF1FBAE210F759200AF5DC7 /* Level3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */; };
 		ABF1FBB0210F7A8F00AF5DC7 /* Level4_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */; };
 		ABF1FBB2210F7F2000AF5DC7 /* Level5_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */; };
 		ABF1FBB4210F8C0F00AF5DC7 /* Level6_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB3210F8C0E00AF5DC7 /* Level6_ViewController.swift */; };
 		ABF1FBB6210F94F900AF5DC7 /* Level7_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB5210F94F900AF5DC7 /* Level7_ViewController.swift */; };
 		ABF1FBB8210F9AE600AF5DC7 /* Level8_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB7210F9AE600AF5DC7 /* Level8_ViewController.swift */; };
 		ABF1FBBA210FA45C00AF5DC7 /* Level9_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBB9210FA45C00AF5DC7 /* Level9_ViewController.swift */; };
+		ABF1FBBE2110C15700AF5DC7 /* Level3_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF1FBBD2110C15700AF5DC7 /* Level3_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,13 +43,13 @@
 		AB6725482107C5A9009B1869 /* Level1_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level1_ViewController.swift; sourceTree = "<group>"; };
 		AB67254A2108DD35009B1869 /* Level2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level2_ViewController.swift; sourceTree = "<group>"; };
 		AB964C0520FF956300D698E0 /* MultiplayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplayerViewController.swift; sourceTree = "<group>"; };
-		ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level5_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBB3210F8C0E00AF5DC7 /* Level6_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level6_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBB5210F94F900AF5DC7 /* Level7_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level7_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBB7210F9AE600AF5DC7 /* Level8_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level8_ViewController.swift; sourceTree = "<group>"; };
 		ABF1FBB9210FA45C00AF5DC7 /* Level9_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level9_ViewController.swift; sourceTree = "<group>"; };
+		ABF1FBBD2110C15700AF5DC7 /* Level3_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level3_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
 				AB6725482107C5A9009B1869 /* Level1_ViewController.swift */,
 				AB67254A2108DD35009B1869 /* Level2_ViewController.swift */,
-				ABF1FBAD210F759200AF5DC7 /* Level3_ViewController.swift */,
+				ABF1FBBD2110C15700AF5DC7 /* Level3_ViewController.swift */,
 				ABF1FBAF210F7A8F00AF5DC7 /* Level4_ViewController.swift */,
 				ABF1FBB1210F7F2000AF5DC7 /* Level5_ViewController.swift */,
 				ABF1FBB3210F8C0E00AF5DC7 /* Level6_ViewController.swift */,
@@ -182,6 +182,7 @@
 			files = (
 				ABF1FBB8210F9AE600AF5DC7 /* Level8_ViewController.swift in Sources */,
 				ABF1FBB0210F7A8F00AF5DC7 /* Level4_ViewController.swift in Sources */,
+				ABF1FBBE2110C15700AF5DC7 /* Level3_ViewController.swift in Sources */,
 				AB67254B2108DD35009B1869 /* Level2_ViewController.swift in Sources */,
 				AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */,
 				AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */,
@@ -189,7 +190,6 @@
 				ABF1FBB6210F94F900AF5DC7 /* Level7_ViewController.swift in Sources */,
 				AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */,
 				ABF1FBB2210F7F2000AF5DC7 /* Level5_ViewController.swift in Sources */,
-				ABF1FBAE210F759200AF5DC7 /* Level3_ViewController.swift in Sources */,
 				AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */,
 				AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */,
 				ABF1FBBA210FA45C00AF5DC7 /* Level9_ViewController.swift in Sources */,

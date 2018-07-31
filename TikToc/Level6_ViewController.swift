@@ -49,21 +49,12 @@ class Level6_ViewController: UIViewController {
         ResetLvl6.isEnabled = true
         StartLvl6.isEnabled = false
         
-        if (Highscore6 < 50){
+        if (Score6 > 30 && Score6 < 40){
+            Highscore6 = Score6
+            HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
             nextBtnLvl6.isHidden = false
             nextBtnLvl6.isEnabled = true
-            
-            //            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            //
-            //            UIView.animate(withDuration: 2.0,
-            //                           delay: 0,
-            //                           usingSpringWithDamping: 0.2,
-            //                           initialSpringVelocity: 6.0,
-            //                           options: .allowUserInteraction,
-            //                           animations: { [weak self] in
-            //                            self?.NextBtn.transform = .identity
-            //                },
-            //                           completion: nil)
+
         } else {
             nextBtnLvl6.isHidden = true
             nextBtnLvl6.isEnabled = false
@@ -116,21 +107,10 @@ class Level6_ViewController: UIViewController {
         
         ResetLvl6.isEnabled = false
         
-        if (Highscore6 < 50){
+        if (Highscore6 > 30 && Highscore6 < 40){
             nextBtnLvl6.isHidden = false
             nextBtnLvl6.isEnabled = true
-            
-            //            NextBtn.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            //
-            //            UIView.animate(withDuration: 2.0,
-            //                           delay: 0,
-            //                           usingSpringWithDamping: 0.2,
-            //                           initialSpringVelocity: 6.0,
-            //                           options: .allowUserInteraction,
-            //                           animations: { [weak self] in
-            //                            self?.NextBtn.transform = .identity
-            //                },
-            //                           completion: nil)
+
         } else {
             nextBtnLvl6.isHidden = true
             nextBtnLvl6.isEnabled = false

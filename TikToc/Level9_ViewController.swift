@@ -82,7 +82,9 @@ class Level9_ViewController: UIViewController {
         Reset9.isEnabled = true
         Start9.isEnabled = false
         
-        if (Highscore9 < 50){
+        if (Score9 > 15 && Score9 < 20){
+            Highscore9 = Score9
+            HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
             Next9.isHidden = false
             Next9.isEnabled = true
             
@@ -108,7 +110,7 @@ class Level9_ViewController: UIViewController {
         
         Reset9.isEnabled = false
         
-        if (Highscore9 < 50){
+        if (Highscore9 > 15 && Highscore9 < 20){
             Next9.isHidden = false
             Next9.isEnabled = true
             
