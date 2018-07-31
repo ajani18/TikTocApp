@@ -10,41 +10,41 @@ import UIKit
 
 class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     
-    //Player 1 Name Tag
-    
-    @IBOutlet weak var player1NameTag: UILabel!
-    
-    @IBOutlet weak var player1Name: UITextField!
-    
-    @IBAction func enterP1Name(_ sender: Any) {
-        player1NameTag.text = "Player 1: " + (player1Name.text)!
-        
-        start.isEnabled = false
-        stop.isEnabled = false
-        reset.isEnabled = false
-        
-        start2.isEnabled = false
-        stop2.isEnabled = false
-        reset.isEnabled = false
-        
-    }
-    
-    //Player 2 Name Tag
-    
-    @IBOutlet weak var enterPlayer2Name: UIButton!
-    @IBOutlet weak var player2Label: UILabel!
-    
-    @IBOutlet weak var player2TextField: UITextField!
-    
-    @IBAction func enterP2Name(_ sender: Any) {
-        player2Label.text = "Player 2: " + (player2TextField.text)!
-        
-        start.isEnabled = true
-        reset.isEnabled = true
-        stop.isEnabled = false
-        
-    }
-    
+//    //Player 1 Name Tag
+//
+//    @IBOutlet weak var player1NameTag: UILabel!
+//
+//    @IBOutlet weak var player1Name: UITextField!
+//
+//    @IBAction func enterP1Name(_ sender: Any) {
+//        player1NameTag.text = "Player 1: " + (player1Name.text)!
+//
+//        start.isEnabled = false
+//        stop.isEnabled = false
+//        reset.isEnabled = false
+//
+//        start2.isEnabled = false
+//        stop2.isEnabled = false
+//        reset.isEnabled = false
+//
+//    }
+//
+//    //Player 2 Name Tag
+//
+//    @IBOutlet weak var enterPlayer2Name: UIButton!
+////    @IBOutlet weak var player2Label: UILabel!
+//
+//    @IBOutlet weak var player2TextField: UITextField!
+//
+//    @IBAction func enterP2Name(_ sender: Any) {
+//        player2Label.text = "Player 2: " + (player2TextField.text)!
+//
+//        start.isEnabled = true
+//        reset.isEnabled = true
+//        stop.isEnabled = false
+//
+//    }
+//
     //Player 1 Varaibles
     
     var timer = Timer()
@@ -117,7 +117,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         if ((Highscore12 > Score) && (Score != 0))  {
             Highscore12 = Score
-            HighscoreLbl.text = String(format: "%02d:%02d:%02d", Highscore12 / 3600, (Highscore12 % 3600) / 60, (Highscore12 % 3600) % 60)
+//            HighscoreLbl.text = String(format: "%02d:%02d:%02d", Highscore12 / 3600, (Highscore12 % 3600) / 60, (Highscore12 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore12, forKey: "Highscore1")
             HighscoreDefault.synchronize()
@@ -183,7 +183,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         if (highScore > Score2) && (Score2 != 0)  {
             highScore = Score2
-            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
+//            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
             let HighscoreDefault2 = UserDefaults.standard
             HighscoreDefault2.set(highScore, forKey: "Highscore2")
             HighscoreDefault2.synchronize()
@@ -198,14 +198,14 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         reset2.isEnabled = true
         start2.isEnabled = false
         
-        if (Score < Score2){
-            winnerLabel.isHidden = false
-            winnerLabel.text = (player1Name.text)! + " was " + String((Score2-Score)/100) + " seconds faster"
-        } else if (Score2  < Score) {
-            winnerLabel.isHidden = false
-            winnerLabel.text = (player2TextField.text)! + " was ." + String((Score-Score2)/100) + " seconds faster"
-            
-        }
+//        if (Score < Score2){
+//            winnerLabel.isHidden = false
+//            winnerLabel.text = (player1Name.text)! + " was " + String((Score2-Score)/100) + " seconds faster"
+//        } else if (Score2  < Score) {
+//            winnerLabel.isHidden = false
+//            winnerLabel.text = (player2TextField.text)! + " was ." + String((Score-Score2)/100) + " seconds faster"
+//
+//        }
 
     }
     
@@ -224,7 +224,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 
         start2.isEnabled = false
         
-        winnerLabel.isHidden = true
+//        winnerLabel.isHidden = true
 
     }
     
@@ -240,26 +240,26 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player2Label.isHidden = false
+//        player2Label.isHidden = false
         
-        player2TextField.delegate = self
-        player1Name.delegate = self
+//        player2TextField.delegate = self
+//        player1Name.delegate = self
 
         // Do any additional setup after loading the view.
         
-        winnerLabel.isHidden = true
-        winnerLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
+//        winnerLabel.isHidden = true
+//        winnerLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 2))
         
         start2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         stop2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         reset2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
         ScoreLbl2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-        HighscoreLbl2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        HighscoreLbl2.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
-        player2Label.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-        player2TextField.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-        enterPlayer2Name.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        player2Label.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        player2TextField.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        enterPlayer2Name.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
         stop.isHidden = true
         stop2.isHidden = true
@@ -267,18 +267,18 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore1") != nil) {
             Highscore12 = HighscoreDefault.value(forKey: "Highscore1") as! Int
-            HighscoreLbl.text = String(format: "%02d:%02d:%02d", Highscore12 / 3600, (Highscore12 % 3600) / 60, (Highscore12 % 3600) % 60)
+//            HighscoreLbl.text = String(format: "%02d:%02d:%02d", Highscore12 / 3600, (Highscore12 % 3600) / 60, (Highscore12 % 3600) % 60)
             
         let HighscoreDefault2 = UserDefaults.standard
         if (HighscoreDefault2.value(forKey: "Highscore2") != nil) {
             highScore = HighscoreDefault2.value(forKey: "Highscore2") as! Int
-            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
+//            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
             
-        start2.isEnabled = false
-        reset2.isEnabled = false
-            
-        start.isEnabled = false
-        reset.isEnabled = false
+//        start2.isEnabled = false
+//        reset2.isEnabled = false
+//
+//        start.isEnabled = false
+//        reset.isEnabled = false
     }
             
 
