@@ -62,16 +62,16 @@ class Level9_ViewController: UIViewController {
     @IBAction func StopAction9(_ sender: Any) {
         timer9.invalidate()
         
-        if ((Highscore9 > Score9) && (Score9 != 0))  {
-            Highscore9 = Score9
-            HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
-            let HighscoreDefault = UserDefaults.standard
-            HighscoreDefault.set(Highscore9, forKey: "Highscore129")
-            HighscoreDefault.synchronize()
-        }
-        else {
-            print ("ok")
-        }
+//        if ((Highscore9 > Score9) && (Score9 != 0))  {
+//            Highscore9 = Score9
+//            HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
+//            let HighscoreDefault = UserDefaults.standard
+//            HighscoreDefault.set(Highscore9, forKey: "Highscore129")
+//            HighscoreDefault.synchronize()
+//        }
+//        else {
+//            print ("ok")
+//        }
         
         //        let HighScore123 = Double(Highscore123)
         
@@ -82,9 +82,12 @@ class Level9_ViewController: UIViewController {
         Reset9.isEnabled = true
         Start9.isEnabled = false
         
-        if (Score9 > 15 && Score9 < 20){
+        if (Score9 > 0 && Score9 < 8){
             Highscore9 = Score9
             HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
+            let HighscoreDefault = UserDefaults.standard
+            HighscoreDefault.set(Highscore9, forKey: "Highscore129")
+            HighscoreDefault.synchronize()
             Next9.isHidden = false
             Next9.isEnabled = true
             

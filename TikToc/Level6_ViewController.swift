@@ -29,16 +29,16 @@ class Level6_ViewController: UIViewController {
     @IBAction func StopActionLevel6(_ sender: Any) {
         timer6.invalidate()
         
-        if ((Highscore6 > Score6) && (Score6 != 0))  {
-            Highscore6 = Score6
-            HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
-            let HighscoreDefault = UserDefaults.standard
-            HighscoreDefault.set(Highscore6, forKey: "Highscore678")
-            HighscoreDefault.synchronize()
-        }
-        else {
-            print ("ok")
-        }
+//        if ((Highscore6 > Score6) && (Score6 != 0))  {
+//            Highscore6 = Score6
+//            HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
+//            let HighscoreDefault = UserDefaults.standard
+//            HighscoreDefault.set(Highscore6, forKey: "Highscore678")
+//            HighscoreDefault.synchronize()
+//        }
+//        else {
+//            print ("ok")
+//        }
         
         //        let HighScore123 = Double(Highscore123)
         
@@ -52,6 +52,9 @@ class Level6_ViewController: UIViewController {
         if (Score6 > 30 && Score6 < 40){
             Highscore6 = Score6
             HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
+            let HighscoreDefault = UserDefaults.standard
+            HighscoreDefault.set(Highscore6, forKey: "Highscore678")
+            HighscoreDefault.synchronize()
             nextBtnLvl6.isHidden = false
             nextBtnLvl6.isEnabled = true
 
@@ -67,7 +70,7 @@ class Level6_ViewController: UIViewController {
         ScoreLblLvl6.text! = String(format: "%02d:%02d:%02d", Score6 / 3600, (Score6 % 3600) / 60, (Score6 % 3600) % 60)
         
         StopLvl6.isHidden = true
-        StopLvl6.isHidden = false
+        StartLvl6.isHidden = false
         
         ResetLvl6.isEnabled = false
         

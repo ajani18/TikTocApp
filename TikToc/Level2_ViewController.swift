@@ -28,7 +28,7 @@ class Level2_ViewController: UIViewController {
     
     @IBAction func TutorialLvl2(_ sender: Any) {
         
-        createAlert(title: "Level 2 Tutorial", message: "You Have Be Quick On the Level as the Stop Button Will Appear Randomly")
+        createAlert(title: "Level 2 Tutorial", message: "Try to be Fast as the Stop Button is going to Appear Randomly")
         
     }
     

@@ -10,6 +10,9 @@ import UIKit
 
 class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     
+    
+    @IBOutlet weak var directionWinnerLbl: UILabel!
+    
 //    //Player 1 Name Tag
 //
 //    @IBOutlet weak var player1NameTag: UILabel!
@@ -101,6 +104,8 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         stop2.isEnabled = false
         start2.isEnabled = false
         
+        directionWinnerLbl.text = "Now Hit Stop"
+        
     }
     
     @objc func updateCountdown() {
@@ -134,7 +139,10 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         start2.isEnabled = true
         stop2.isEnabled = false
-
+        
+         directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+        directionWinnerLbl.text = "It is Your Turn: Hit Start"
 
     }
     
@@ -167,6 +175,11 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 
         stop2.isEnabled = true
         
+        directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+        directionWinnerLbl.text = "Now Hit Stop"
+
+        
         
     }
     
@@ -181,15 +194,22 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func StopAction2(_ sender: Any) {
         timer2.invalidate()
         
-        if (highScore > Score2) && (Score2 != 0)  {
-            highScore = Score2
-//            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
-            let HighscoreDefault2 = UserDefaults.standard
-            HighscoreDefault2.set(highScore, forKey: "Highscore2")
-            HighscoreDefault2.synchronize()
-        }
-        else {
-            print ("ok")
+//        if (highScore > Score2) && (Score2 != 0)  {
+//            highScore = Score2
+////            HighscoreLbl2.text = String(format: "%02d:%02d:%02d", highScore / 3600, (highScore % 3600) / 60, (highScore % 3600) % 60)
+//            let HighscoreDefault2 = UserDefaults.standard
+//            HighscoreDefault2.set(highScore, forKey: "Highscore2")
+//            HighscoreDefault2.synchronize()
+//        }
+//        else {
+//            print ("ok")
+//        }
+        
+        if (Score2 > Score) {
+            directionWinnerLbl.text = "Player 1 Wins"
+        } else if (Score > Score2){
+            directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+            directionWinnerLbl.text = "Player 2 Wins"
         }
         
         start2.isHidden = false
@@ -197,6 +217,11 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 
         reset2.isEnabled = true
         start2.isEnabled = false
+        
+        directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        
+//        directionWinnerLbl.text = "Hit Reset"
+
         
 //        if (Score < Score2){
 //            winnerLabel.isHidden = false
@@ -224,21 +249,27 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 
         start2.isEnabled = false
         
+        directionWinnerLbl.text = "Now You Can Hit Reset to Start Again"
+
+        
 //        winnerLabel.isHidden = true
 
     }
     
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
+//
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true)
+//    }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        directionWinnerLbl.text = "You can Star the Game"
         
 //        player2Label.isHidden = false
         

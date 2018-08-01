@@ -34,6 +34,21 @@ class Level8_ViewController: UIViewController {
         
         ResetLvl8.isEnabled = false
         
+        let buttonWidth = StopLvl8.frame.width
+        let buttonHeight = StopLvl8.frame.height
+        
+        let viewWidth = StopLvl8.superview!.bounds.width
+        let viewHeight = StopLvl8.superview!.bounds.width
+        
+        let xWidth = viewWidth - buttonWidth
+        let yHeight = viewHeight - buttonHeight
+        
+        let xoffset = CGFloat(arc4random_uniform(UInt32(xWidth)))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(yHeight)))
+        
+        StopLvl8.center.x = xoffset + buttonWidth / 2
+        StopLvl8.center.y = yoffset + buttonHeight / 2
+        
     }
     
     @objc func updateCountdown() {
@@ -67,7 +82,7 @@ class Level8_ViewController: UIViewController {
         ResetLvl8.isEnabled = true
         StartLvl8.isEnabled = false
         
-        if (Highscore8 < 60){
+        if (Highscore8 < 40){
             nextBtn8.isHidden = false
             nextBtn8.isEnabled = true
 
@@ -108,7 +123,7 @@ class Level8_ViewController: UIViewController {
         
         ResetLvl8.isEnabled = false
         
-        if (Highscore8 < 60){
+        if (Highscore8 < 40){
             nextBtn8.isHidden = false
             nextBtn8.isEnabled = true
             

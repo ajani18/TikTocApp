@@ -33,8 +33,22 @@ class Level5_ViewController: UIViewController {
         StopLvl5.isHidden = false
         
         ResetLvl5.isEnabled = false
-
         
+        let buttonWidth = StopLvl5.frame.width
+        let buttonHeight = StopLvl5.frame.height
+        
+        let viewWidth = StopLvl5.superview!.bounds.width
+        let viewHeight = StopLvl5.superview!.bounds.width
+        
+        let xWidth = viewWidth - buttonWidth
+        let yHeight = viewHeight - buttonHeight
+        
+        let xoffset = CGFloat(arc4random_uniform(UInt32(xWidth)))
+        let yoffset = CGFloat(arc4random_uniform(UInt32(yHeight)))
+        
+        StopLvl5.center.x = xoffset + buttonWidth / 2
+        StopLvl5.center.y = yoffset + buttonHeight / 2
+
     }
     
     @objc func updateCountdown() {

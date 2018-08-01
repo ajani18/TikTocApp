@@ -43,16 +43,16 @@ class Level3_ViewController: UIViewController {
     @IBAction func StopAction3(_ sender: Any) {
         timer3.invalidate()
         
-        if ((Highscore3 > Score3) && (Score3 != 0))  {
-            Highscore3 = Score3
-            HighScoreLbl3.text = String(format: "%02d:%02d:%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
-            let HighscoreDefault = UserDefaults.standard
-            HighscoreDefault.set(Highscore3, forKey: "Highscore123123")
-            HighscoreDefault.synchronize()
-        }
-        else {
-            print ("ok")
-        }
+//        if ((Highscore3 > Score3) && (Score3 != 0))  {
+//            Highscore3 = Score3
+//            HighScoreLbl3.text = String(format: "%02d:%02d:%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+//            let HighscoreDefault = UserDefaults.standard
+//            HighscoreDefault.set(Highscore3, forKey: "Highscore123123")
+//            HighscoreDefault.synchronize()
+//        }
+//        else {
+//            print ("ok")
+//        }
         
         //        let HighScore123 = Double(Highscore123)
         
@@ -66,6 +66,9 @@ class Level3_ViewController: UIViewController {
         if (Score3 > 40 && Score3 < 60){
             Highscore3 = Score3
             HighScoreLbl3.text = String(format: "%02d:%02d:%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+            let HighscoreDefault = UserDefaults.standard
+            HighscoreDefault.set(Highscore3, forKey: "Highscore123123")
+            HighscoreDefault.synchronize()
             nextBtn3.isHidden = false
             nextBtn3.isEnabled = true
             

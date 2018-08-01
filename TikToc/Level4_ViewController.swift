@@ -33,6 +33,7 @@ class Level4_ViewController: UIViewController {
         StopLvl4.isHidden = false
         
         ResetLvl4.isEnabled = false
+        
     }
     
     @objc func updateCountdown() {
