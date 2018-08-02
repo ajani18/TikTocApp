@@ -13,7 +13,13 @@ class Level8_ViewController: UIViewController {
     var timer8 = Timer()
     var Score8 = 0
     var Highscore8 = 100000000000
+    
+    
+    @IBAction func Tutorial8(_ sender: Any) {
+        createAlert(title: "Level 8", message: "The Stop Button will appear randomly and get a time below 0.4 seconds")
 
+    }
+    
     @IBOutlet weak var ScoreLblLvl8: UILabel!
     
     @IBOutlet weak var StartLvl8: UIButton!
@@ -55,7 +61,7 @@ class Level8_ViewController: UIViewController {
         Score8 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl8.text! = String(format: "%02d:%02d:%02d", Score8 / 3600, (Score8 % 3600) / 60, (Score8 % 3600) % 60)
+        ScoreLblLvl8.text! = String(format: "%02d:%02d.%02d", Score8 / 3600, (Score8 % 3600) / 60, (Score8 % 3600) % 60)
        
     }
     
@@ -64,7 +70,7 @@ class Level8_ViewController: UIViewController {
         
         if ((Highscore8 > Score8) && (Score8 != 0))  {
             Highscore8 = Score8
-            HighScoreLbl8.text = String(format: "%02d:%02d:%02d", Highscore8 / 3600, (Highscore8 % 3600) / 60, (Highscore8 % 3600) % 60)
+            HighScoreLbl8.text = String(format: "%02d:%02d.%02d", Highscore8 / 3600, (Highscore8 % 3600) / 60, (Highscore8 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore8, forKey: "Highscore12345047")
             HighscoreDefault.synchronize()
@@ -97,7 +103,7 @@ class Level8_ViewController: UIViewController {
     @IBAction func ResetActionLvl8(_ sender: Any) {
         Score8 = 0
         StopActionLvl8(sender)
-        ScoreLblLvl8.text! = String(format: "%02d:%02d:%02d", Score8 / 3600, (Score8 % 3600) / 60, (Score8 % 3600) % 60)
+        ScoreLblLvl8.text! = String(format: "%02d:%02d.%02d", Score8 / 3600, (Score8 % 3600) / 60, (Score8 % 3600) % 60)
         
         StopLvl8.isHidden = true
         StartLvl8.isHidden = false
@@ -114,7 +120,7 @@ class Level8_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore12345047") != nil) {
             Highscore8 = HighscoreDefault.value(forKey: "Highscore123") as! Int
-            HighScoreLbl8.text = String(format: "%02d:%02d:%02d", Highscore8 / 3600, (Highscore8 % 3600) / 60, (Highscore8 % 3600) % 60)
+            HighScoreLbl8.text = String(format: "%02d:%02d.%02d", Highscore8 / 3600, (Highscore8 % 3600) / 60, (Highscore8 % 3600) % 60)
             
         }
         
@@ -139,6 +145,16 @@ class Level8_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

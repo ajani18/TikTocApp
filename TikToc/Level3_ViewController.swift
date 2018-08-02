@@ -13,7 +13,13 @@ class Level3_ViewController: UIViewController {
     var timer3 = Timer()
     var Score3 = 0
     var Highscore3 = 100000000000
-
+    
+    
+    @IBAction func TutorialAction3(_ sender: Any) {
+        
+        createAlert(title: "Level 3", message: "This level is about accuracy, try to get between 0.4 & 0.6 seconds")
+    }
+    
     @IBOutlet weak var HighScoreLbl3: UILabel!
     
     @IBOutlet weak var ScoreLbl3: UILabel!
@@ -29,7 +35,7 @@ class Level3_ViewController: UIViewController {
     @IBAction func ResetAction3(_ sender: Any) {
         Score3 = 0
         StopAction3(sender)
-        ScoreLbl3.text! = String(format: "%02d:%02d:%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
+        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
         
         stop3.isHidden = true
         start3.isHidden = false
@@ -65,7 +71,7 @@ class Level3_ViewController: UIViewController {
         
         if (Score3 > 40 && Score3 < 60){
             Highscore3 = Score3
-            HighScoreLbl3.text = String(format: "%02d:%02d:%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore3, forKey: "Highscore123123")
             HighscoreDefault.synchronize()
@@ -92,7 +98,7 @@ class Level3_ViewController: UIViewController {
         Score3 += 1
         
         //Set counter in UILabel
-        ScoreLbl3.text! = String(format: "%02d:%02d:%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
+        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
         
     }
 
@@ -102,7 +108,7 @@ class Level3_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123123") != nil) {
             Highscore3 = HighscoreDefault.value(forKey: "Highscore123123") as! Int
-            HighScoreLbl3.text = String(format: "%02d:%02d:%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
             
         }
         
@@ -127,6 +133,16 @@ class Level3_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

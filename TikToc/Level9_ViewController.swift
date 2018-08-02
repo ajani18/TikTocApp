@@ -13,7 +13,12 @@ class Level9_ViewController: UIViewController {
     var timer9 = Timer()
     var Score9 = 0
     var Highscore9 = 100000000000
-
+    
+    
+    @IBAction func Tutorial9(_ sender: Any) {
+        createAlert(title: "Level 9", message: "This level is about accuracy, try to get between 0 & 0.08 seconds")
+    }
+    
     @IBOutlet weak var Start9: UIButton!
     
     @IBOutlet weak var ScoreLbl9: UILabel!
@@ -40,14 +45,14 @@ class Level9_ViewController: UIViewController {
         Score9 += 1
         
         //Set counter in UILabel
-        ScoreLbl9.text! = String(format: "%02d:%02d:%02d", Score9 / 3600, (Score9 % 3600) / 60, (Score9 % 3600) % 60)
+        ScoreLbl9.text! = String(format: "%02d:%02d.%02d", Score9 / 3600, (Score9 % 3600) / 60, (Score9 % 3600) % 60)
         
     }
     
     @IBAction func ResetAction9(_ sender: Any) {
         Score9 = 0
         StopAction9(sender)
-        ScoreLbl9.text! = String(format: "%02d:%02d:%02d", Score9 / 3600, (Score9 % 3600) / 60, (Score9 % 3600) % 60)
+        ScoreLbl9.text! = String(format: "%02d:%02d.%02d", Score9 / 3600, (Score9 % 3600) / 60, (Score9 % 3600) % 60)
         
         Stop9.isHidden = true
         Start9.isHidden = false
@@ -84,7 +89,7 @@ class Level9_ViewController: UIViewController {
         
         if (Score9 > 0 && Score9 < 8){
             Highscore9 = Score9
-            HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
+            HighScore9.text = String(format: "%02d:%02d.%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore9, forKey: "Highscore129")
             HighscoreDefault.synchronize()
@@ -104,7 +109,7 @@ class Level9_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore129") != nil) {
             Highscore9 = HighscoreDefault.value(forKey: "Highscore129") as! Int
-            HighScore9.text = String(format: "%02d:%02d:%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
+            HighScore9.text = String(format: "%02d:%02d.%02d", Highscore9 / 3600, (Highscore9 % 3600) / 60, (Highscore9 % 3600) % 60)
             
         }
         
@@ -113,7 +118,7 @@ class Level9_ViewController: UIViewController {
         
         Reset9.isEnabled = false
         
-        if (Highscore9 > 15 && Highscore9 < 20){
+        if (Highscore9 > 0 && Highscore9 < 8){
             Next9.isHidden = false
             Next9.isEnabled = true
             
@@ -130,6 +135,16 @@ class Level9_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

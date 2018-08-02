@@ -13,6 +13,11 @@ class Level5_ViewController: UIViewController {
     var timer5 = Timer()
     var Score123 = 0
     var Highscore12356 = 100000000000
+    
+    @IBAction func Tutorial5(_ sender: Any) {
+        createAlert(title: "Level 5", message: "The Stop Button will appear randomly and get a time below 2.0 seconds")
+    }
+    
 
     @IBOutlet weak var ScoreLblLvl5: UILabel!
     
@@ -55,14 +60,14 @@ class Level5_ViewController: UIViewController {
         Score123 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl5.text! = String(format: "%02d:%02d:%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
         
     }
     
     @IBAction func ResetActionLvl5(_ sender: Any) {
         Score123 = 0
         StopActionLvl5(sender)
-        ScoreLblLvl5.text! = String(format: "%02d:%02d:%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
         
         StopLvl5.isHidden = true
         StartLblLvl4.isHidden = false
@@ -78,7 +83,7 @@ class Level5_ViewController: UIViewController {
         
         if ((Highscore12356 > Score123) && (Score123 != 0))  {
             Highscore12356 = Score123
-            HighScoreLblLvl5.text = String(format: "%02d:%02d:%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore12356, forKey: "Highscore123456")
             HighscoreDefault.synchronize()
@@ -124,7 +129,7 @@ class Level5_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123456") != nil) {
             Highscore12356 = HighscoreDefault.value(forKey: "Highscore123456") as! Int
-            HighScoreLblLvl5.text = String(format: "%02d:%02d:%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
             
         }
         
@@ -161,6 +166,16 @@ class Level5_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

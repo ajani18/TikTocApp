@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-855" y="118"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home Page" id="BYZ-38-t0r" customClass="ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,7 +71,7 @@
                         <color key="tintColor" red="0.28044775128364563" green="0.13463711738586426" blue="0.062789149582386017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="esf-9G-sz0"/>
+                    <navigationItem key="navigationItem" title="Home Page" id="esf-9G-sz0"/>
                     <connections>
                         <outlet property="generalModeBtn" destination="mZv-LU-kPI" id="ZXy-kS-gg9"/>
                         <outlet property="journeyModeBtn" destination="D3y-GJ-lml" id="Osv-N3-fx0"/>
@@ -82,10 +82,10 @@
             </objects>
             <point key="canvasLocation" x="669.60000000000002" y="33.733133433283363"/>
         </scene>
-        <!--Level3 View Controller-->
+        <!--Level 3-->
         <scene sceneID="wdD-SB-Yxy">
             <objects>
-                <viewController id="Pz4-ub-Lgt" customClass="Level3_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 3" id="Pz4-ub-Lgt" customClass="Level3_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dhu-jo-7Lf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd3-lb-5bR">
                                 <rect key="frame" x="53" y="112" width="268" height="29.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vE7-lp-N9H">
@@ -160,23 +160,53 @@
                                     <segue destination="SF4-gj-DK4" kind="show" id="omP-KT-l83"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txR-th-rPt">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="TutorialAction3:" destination="Pz4-ub-Lgt" eventType="touchUpInside" id="u1G-EQ-wbO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0A-LE-Naa">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="XQg-I7-nm2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="UzY-TB-RVy" firstAttribute="trailing" secondItem="txR-th-rPt" secondAttribute="trailing" constant="187.5" id="1So-qh-UZK"/>
                             <constraint firstItem="AD3-0Y-cJC" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="2SD-Nb-9lc"/>
+                            <constraint firstItem="txR-th-rPt" firstAttribute="top" secondItem="UzY-TB-RVy" secondAttribute="top" id="59g-Xv-HaD"/>
                             <constraint firstItem="U0R-Rp-7iF" firstAttribute="top" secondItem="qfl-dm-vfR" secondAttribute="bottom" constant="8" id="69c-e5-AJ3"/>
                             <constraint firstItem="AD3-0Y-cJC" firstAttribute="trailing" secondItem="UzY-TB-RVy" secondAttribute="trailing" id="7q3-Vi-d0s"/>
                             <constraint firstItem="vE7-lp-N9H" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="7zz-8I-U20"/>
                             <constraint firstItem="U0R-Rp-7iF" firstAttribute="top" secondItem="vE7-lp-N9H" secondAttribute="bottom" constant="8" id="8Mn-3A-4pC"/>
+                            <constraint firstItem="J0A-LE-Naa" firstAttribute="top" secondItem="UzY-TB-RVy" secondAttribute="top" id="8Tv-Lj-5ug"/>
                             <constraint firstItem="vE7-lp-N9H" firstAttribute="trailing" secondItem="UzY-TB-RVy" secondAttribute="trailing" id="D2f-TE-SAY"/>
                             <constraint firstItem="yK3-a8-IzW" firstAttribute="trailing" secondItem="UzY-TB-RVy" secondAttribute="trailing" id="E0c-aE-4JR"/>
                             <constraint firstItem="U0R-Rp-7iF" firstAttribute="bottom" secondItem="UzY-TB-RVy" secondAttribute="bottom" id="FGq-1B-eq2"/>
                             <constraint firstItem="dd3-lb-5bR" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" constant="53" id="HrG-Ip-3KO"/>
+                            <constraint firstItem="dd3-lb-5bR" firstAttribute="top" secondItem="txR-th-rPt" secondAttribute="bottom" constant="8" id="IgO-Ed-uUz"/>
+                            <constraint firstItem="UzY-TB-RVy" firstAttribute="trailing" secondItem="J0A-LE-Naa" secondAttribute="trailing" constant="0.5" id="JjA-uU-FhV"/>
+                            <constraint firstItem="dd3-lb-5bR" firstAttribute="top" secondItem="J0A-LE-Naa" secondAttribute="bottom" constant="8" id="Jp5-kW-7pD"/>
                             <constraint firstItem="vE7-lp-N9H" firstAttribute="top" secondItem="AD3-0Y-cJC" secondAttribute="bottom" constant="8" id="N8y-ir-RbG"/>
                             <constraint firstItem="U0R-Rp-7iF" firstAttribute="trailing" secondItem="UzY-TB-RVy" secondAttribute="trailing" id="RqX-Pe-xkH"/>
                             <constraint firstItem="U0R-Rp-7iF" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="aIo-8D-o5K"/>
                             <constraint firstItem="UzY-TB-RVy" firstAttribute="trailing" secondItem="dd3-lb-5bR" secondAttribute="trailing" constant="54" id="dHV-Re-ui2"/>
                             <constraint firstItem="dd3-lb-5bR" firstAttribute="top" secondItem="dhu-jo-7Lf" secondAttribute="topMargin" constant="48" id="efX-eq-A2o"/>
+                            <constraint firstItem="txR-th-rPt" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="kwM-PE-oHA"/>
+                            <constraint firstItem="J0A-LE-Naa" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" constant="187" id="mDQ-iy-Zc7"/>
                             <constraint firstItem="qfl-dm-vfR" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="o6n-B2-wQC"/>
                             <constraint firstItem="qfl-dm-vfR" firstAttribute="trailing" secondItem="UzY-TB-RVy" secondAttribute="trailing" id="oJC-uz-Bi0"/>
                             <constraint firstItem="yK3-a8-IzW" firstAttribute="leading" secondItem="UzY-TB-RVy" secondAttribute="leading" id="qsG-ON-7Hc"/>
@@ -197,10 +227,10 @@
             </objects>
             <point key="canvasLocation" x="144.80000000000001" y="1789.6551724137933"/>
         </scene>
-        <!--Level4 View Controller-->
+        <!--Level 4-->
         <scene sceneID="0VR-Jy-etv">
             <objects>
-                <viewController id="SF4-gj-DK4" customClass="Level4_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 4" id="SF4-gj-DK4" customClass="Level4_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NxS-eP-ReK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -276,24 +306,54 @@
                                     <segue destination="jGS-QV-kma" kind="show" id="bqc-cW-Qmi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5J-2e-zOA">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="TutorialAction4:" destination="SF4-gj-DK4" eventType="touchUpInside" id="fXW-ZC-OkR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWI-Hr-zkO">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="HED-Wv-yRF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="o5J-2e-zOA" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="57q-Rz-gYJ"/>
                             <constraint firstItem="hlD-Sz-AMj" firstAttribute="top" secondItem="oA8-D8-Hjo" secondAttribute="bottom" constant="8" id="5Yf-hB-MV2"/>
+                            <constraint firstItem="df4-Og-Kzk" firstAttribute="trailing" secondItem="WWI-Hr-zkO" secondAttribute="trailing" constant="0.5" id="9Md-k0-2bG"/>
                             <constraint firstItem="b3a-EZ-5iy" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="A26-KP-Bqt"/>
                             <constraint firstItem="wzN-ez-3Ev" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="A5O-wx-hIl"/>
                             <constraint firstItem="hlD-Sz-AMj" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="AxK-oz-c3v"/>
+                            <constraint firstItem="df4-Og-Kzk" firstAttribute="trailing" secondItem="o5J-2e-zOA" secondAttribute="trailing" constant="187.5" id="BHu-Z6-KB3"/>
                             <constraint firstItem="b3a-EZ-5iy" firstAttribute="trailing" secondItem="df4-Og-Kzk" secondAttribute="trailing" id="FHQ-hX-H39"/>
                             <constraint firstItem="wzN-ez-3Ev" firstAttribute="bottom" secondItem="df4-Og-Kzk" secondAttribute="bottom" id="Fhj-nH-gAX"/>
                             <constraint firstItem="wzN-ez-3Ev" firstAttribute="top" secondItem="hlD-Sz-AMj" secondAttribute="bottom" constant="8" id="G9P-Wf-BoU"/>
                             <constraint firstItem="oA8-D8-Hjo" firstAttribute="trailing" secondItem="df4-Og-Kzk" secondAttribute="trailing" id="NEK-Pg-WtA"/>
                             <constraint firstItem="rBS-Il-R6k" firstAttribute="top" secondItem="rvw-Lg-S7J" secondAttribute="bottom" constant="23" id="Rpw-hb-oxr"/>
+                            <constraint firstItem="rvw-Lg-S7J" firstAttribute="top" secondItem="o5J-2e-zOA" secondAttribute="bottom" constant="14" id="Wxi-Te-NqD"/>
                             <constraint firstItem="df4-Og-Kzk" firstAttribute="trailing" secondItem="rvw-Lg-S7J" secondAttribute="trailing" constant="127.5" id="YdS-NT-0KH"/>
                             <constraint firstItem="wzN-ez-3Ev" firstAttribute="top" secondItem="b3a-EZ-5iy" secondAttribute="bottom" constant="8" id="ZQb-aq-le2"/>
                             <constraint firstItem="rBS-Il-R6k" firstAttribute="top" secondItem="rvw-Lg-S7J" secondAttribute="bottom" constant="23" id="cIt-AH-1j7"/>
+                            <constraint firstItem="o5J-2e-zOA" firstAttribute="top" secondItem="df4-Og-Kzk" secondAttribute="top" id="ccK-dl-IS4"/>
                             <constraint firstItem="rBS-Il-R6k" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="goK-bJ-gcZ"/>
+                            <constraint firstItem="WWI-Hr-zkO" firstAttribute="top" secondItem="df4-Og-Kzk" secondAttribute="top" id="hji-4c-vUV"/>
+                            <constraint firstItem="rvw-Lg-S7J" firstAttribute="top" secondItem="WWI-Hr-zkO" secondAttribute="bottom" constant="14" id="j7X-Zp-qwC"/>
                             <constraint firstItem="df4-Og-Kzk" firstAttribute="trailing" secondItem="rBS-Il-R6k" secondAttribute="trailing" constant="13.5" id="ktC-cJ-MGW"/>
                             <constraint firstItem="rvw-Lg-S7J" firstAttribute="top" secondItem="df4-Og-Kzk" secondAttribute="top" constant="54" id="nt0-us-W93"/>
+                            <constraint firstItem="WWI-Hr-zkO" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" constant="187" id="o6k-Tv-OqS"/>
                             <constraint firstItem="hlD-Sz-AMj" firstAttribute="trailing" secondItem="df4-Og-Kzk" secondAttribute="trailing" id="oda-bV-2wA"/>
                             <constraint firstItem="rvw-Lg-S7J" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" constant="127" id="xWr-zn-ZtV"/>
                             <constraint firstItem="oA8-D8-Hjo" firstAttribute="leading" secondItem="df4-Og-Kzk" secondAttribute="leading" id="yEz-vJ-qHL"/>
@@ -314,10 +374,10 @@
             </objects>
             <point key="canvasLocation" x="670" y="2520"/>
         </scene>
-        <!--Level5 View Controller-->
+        <!--Level 5-->
         <scene sceneID="Etf-Zz-vdu">
             <objects>
-                <viewController id="jGS-QV-kma" customClass="Level5_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 5" id="jGS-QV-kma" customClass="Level5_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qZP-Ms-MBY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,24 +448,54 @@
                                     <action selector="StopActionLvl5:" destination="jGS-QV-kma" eventType="touchUpInside" id="wZg-zD-LGd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyk-kI-fLU">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Tutorial5:" destination="jGS-QV-kma" eventType="touchUpInside" id="Yb9-FC-JZd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9B-cB-KmJ">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="Zhy-iP-1aW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="b2g-Bh-bta" firstAttribute="trailing" secondItem="ciD-Yg-uHp" secondAttribute="trailing" constant="127.5" id="07b-l9-FlD"/>
                             <constraint firstItem="YCr-FS-HAQ" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" constant="7" id="15B-Jd-qaw"/>
+                            <constraint firstItem="b2g-Bh-bta" firstAttribute="trailing" secondItem="H9B-cB-KmJ" secondAttribute="trailing" constant="0.5" id="3WY-Hf-Sc6"/>
                             <constraint firstItem="ciD-Yg-uHp" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" constant="127" id="6hw-0f-H0L"/>
                             <constraint firstItem="ciD-Yg-uHp" firstAttribute="top" secondItem="b2g-Bh-bta" secondAttribute="top" constant="53" id="BUf-Zr-I9t"/>
                             <constraint firstItem="b2g-Bh-bta" firstAttribute="trailing" secondItem="YCr-FS-HAQ" secondAttribute="trailing" constant="6.5" id="Ddv-nK-D2b"/>
+                            <constraint firstItem="hyk-kI-fLU" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" id="QKM-JQ-R51"/>
+                            <constraint firstItem="hyk-kI-fLU" firstAttribute="top" secondItem="b2g-Bh-bta" secondAttribute="top" id="T69-ty-h0d"/>
                             <constraint firstItem="1Rp-gL-Ye0" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" id="TRu-4X-aJX"/>
                             <constraint firstItem="1Rp-gL-Ye0" firstAttribute="trailing" secondItem="b2g-Bh-bta" secondAttribute="trailing" id="TiA-Af-e54"/>
                             <constraint firstItem="DcW-0T-uj8" firstAttribute="top" secondItem="1Rp-gL-Ye0" secondAttribute="bottom" constant="8" id="Y23-ea-Wuh"/>
                             <constraint firstItem="YCr-FS-HAQ" firstAttribute="top" secondItem="ciD-Yg-uHp" secondAttribute="bottom" constant="32.5" id="Ykp-AE-yCM"/>
                             <constraint firstItem="DcW-0T-uj8" firstAttribute="bottom" secondItem="b2g-Bh-bta" secondAttribute="bottom" id="Zrs-MS-39U"/>
+                            <constraint firstItem="H9B-cB-KmJ" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" constant="187" id="aF9-hU-ozb"/>
+                            <constraint firstItem="ciD-Yg-uHp" firstAttribute="top" secondItem="H9B-cB-KmJ" secondAttribute="bottom" constant="13" id="ce5-nJ-BzK"/>
+                            <constraint firstItem="b2g-Bh-bta" firstAttribute="trailing" secondItem="hyk-kI-fLU" secondAttribute="trailing" constant="187.5" id="cfy-KO-wBK"/>
                             <constraint firstItem="1Rp-gL-Ye0" firstAttribute="top" secondItem="Of0-AL-NTh" secondAttribute="bottom" constant="8" id="fNK-UM-cTd"/>
+                            <constraint firstItem="H9B-cB-KmJ" firstAttribute="top" secondItem="b2g-Bh-bta" secondAttribute="top" id="ftb-tj-RC4"/>
                             <constraint firstItem="YCr-FS-HAQ" firstAttribute="top" secondItem="ciD-Yg-uHp" secondAttribute="bottom" constant="32.5" id="ioW-G8-qrj"/>
                             <constraint firstItem="Of0-AL-NTh" firstAttribute="trailing" secondItem="b2g-Bh-bta" secondAttribute="trailing" id="kVx-vN-F7l"/>
                             <constraint firstItem="DcW-0T-uj8" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" id="oFI-Ha-QhA"/>
                             <constraint firstItem="Of0-AL-NTh" firstAttribute="leading" secondItem="b2g-Bh-bta" secondAttribute="leading" id="pwk-o5-bon"/>
+                            <constraint firstItem="ciD-Yg-uHp" firstAttribute="top" secondItem="hyk-kI-fLU" secondAttribute="bottom" constant="13" id="qK3-lE-4tX"/>
                             <constraint firstItem="DcW-0T-uj8" firstAttribute="trailing" secondItem="b2g-Bh-bta" secondAttribute="trailing" id="yJb-eS-3gF"/>
                             <constraint firstItem="Of0-AL-NTh" firstAttribute="top" secondItem="YCr-FS-HAQ" secondAttribute="bottom" constant="81.5" id="yNc-QN-Y4G"/>
                         </constraints>
@@ -424,10 +514,10 @@
             </objects>
             <point key="canvasLocation" x="1632.8" y="1789.6551724137933"/>
         </scene>
-        <!--Level6 View Controller-->
+        <!--Level 6-->
         <scene sceneID="vaA-AY-KS9">
             <objects>
-                <viewController id="f9c-Yp-ikY" customClass="Level6_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 6" id="f9c-Yp-ikY" customClass="Level6_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Umx-Do-fPy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -504,6 +594,28 @@
                                     <segue destination="HdB-Nz-S41" kind="show" id="mXG-K6-UAj"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kcZ-dM-gNc">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Tutorial6:" destination="f9c-Yp-ikY" eventType="touchUpInside" id="3BY-rE-VEK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9y-GK-Hta">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="h7w-wV-FKA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -511,19 +623,27 @@
                             <constraint firstItem="lCP-Jm-wXN" firstAttribute="top" secondItem="ZKg-8S-7Ts" secondAttribute="top" constant="18" id="2BE-to-nrQ"/>
                             <constraint firstItem="lCP-Jm-wXN" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" constant="53" id="5Qt-q1-P84"/>
                             <constraint firstItem="ZKg-8S-7Ts" firstAttribute="trailing" secondItem="lCP-Jm-wXN" secondAttribute="trailing" constant="54" id="5zh-Gm-gZo"/>
+                            <constraint firstItem="U9y-GK-Hta" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" constant="187" id="9Mq-Ih-oCW"/>
                             <constraint firstItem="c9H-YH-5gL" firstAttribute="top" secondItem="R2m-h0-Vqe" secondAttribute="bottom" constant="8" id="ARy-ZQ-os3"/>
                             <constraint firstItem="dIg-4g-niP" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="DeD-yE-dHf"/>
+                            <constraint firstItem="U9y-GK-Hta" firstAttribute="top" secondItem="ZKg-8S-7Ts" secondAttribute="top" id="GCq-NX-drE"/>
                             <constraint firstItem="c9H-YH-5gL" firstAttribute="top" secondItem="aZp-Sb-TWZ" secondAttribute="bottom" constant="8" id="ID5-Sl-0ZW"/>
+                            <constraint firstItem="FgS-bw-Hb6" firstAttribute="top" secondItem="U9y-GK-Hta" secondAttribute="bottom" constant="51" id="M5k-yf-cSp"/>
+                            <constraint firstItem="ZKg-8S-7Ts" firstAttribute="trailing" secondItem="kcZ-dM-gNc" secondAttribute="trailing" constant="187.5" id="MA8-Rz-Cmu"/>
                             <constraint firstItem="c9H-YH-5gL" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="Na8-Oe-Bya"/>
+                            <constraint firstItem="kcZ-dM-gNc" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="UpO-H4-iZj"/>
                             <constraint firstItem="dIg-4g-niP" firstAttribute="trailing" secondItem="ZKg-8S-7Ts" secondAttribute="trailing" id="Vsl-p5-gCe"/>
+                            <constraint firstItem="ZKg-8S-7Ts" firstAttribute="trailing" secondItem="U9y-GK-Hta" secondAttribute="trailing" constant="0.5" id="Ykm-o6-uMq"/>
                             <constraint firstItem="aZp-Sb-TWZ" firstAttribute="trailing" secondItem="ZKg-8S-7Ts" secondAttribute="trailing" id="d42-TR-6ks"/>
                             <constraint firstItem="aZp-Sb-TWZ" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="dDy-4u-ixY"/>
                             <constraint firstItem="R2m-h0-Vqe" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="dKq-cR-wTV"/>
                             <constraint firstItem="FgS-bw-Hb6" firstAttribute="leading" secondItem="ZKg-8S-7Ts" secondAttribute="leading" id="dt6-ld-paT"/>
                             <constraint firstItem="dIg-4g-niP" firstAttribute="top" secondItem="lCP-Jm-wXN" secondAttribute="bottom" constant="148" id="fOa-E7-cJ0"/>
+                            <constraint firstItem="kcZ-dM-gNc" firstAttribute="top" secondItem="ZKg-8S-7Ts" secondAttribute="top" id="gcb-MN-p3M"/>
                             <constraint firstItem="FgS-bw-Hb6" firstAttribute="trailing" secondItem="ZKg-8S-7Ts" secondAttribute="trailing" id="kM6-NB-pm5"/>
                             <constraint firstItem="c9H-YH-5gL" firstAttribute="bottom" secondItem="ZKg-8S-7Ts" secondAttribute="bottom" id="kjM-5I-Ep4"/>
                             <constraint firstItem="R2m-h0-Vqe" firstAttribute="trailing" secondItem="ZKg-8S-7Ts" secondAttribute="trailing" id="lOv-7J-zFC"/>
+                            <constraint firstItem="FgS-bw-Hb6" firstAttribute="top" secondItem="kcZ-dM-gNc" secondAttribute="bottom" constant="51" id="mkd-7x-LUA"/>
                             <constraint firstItem="R2m-h0-Vqe" firstAttribute="top" secondItem="dIg-4g-niP" secondAttribute="bottom" constant="8" id="nSK-Aq-oKC"/>
                             <constraint firstItem="dIg-4g-niP" firstAttribute="top" secondItem="FgS-bw-Hb6" secondAttribute="bottom" constant="53" id="zFJ-7p-cB5"/>
                             <constraint firstItem="FgS-bw-Hb6" firstAttribute="top" secondItem="ZKg-8S-7Ts" secondAttribute="top" constant="91" id="zzU-Ld-LR7"/>
@@ -543,10 +663,10 @@
             </objects>
             <point key="canvasLocation" x="2383" y="1790"/>
         </scene>
-        <!--Level7 View Controller-->
+        <!--Level 7-->
         <scene sceneID="i9f-wC-RWu">
             <objects>
-                <viewController id="HdB-Nz-S41" customClass="Level7_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 7" id="HdB-Nz-S41" customClass="Level7_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vvT-cZ-Zi9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -622,17 +742,45 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9oF-ez-7CV">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Tutoiral7:" destination="HdB-Nz-S41" eventType="touchUpInside" id="T54-t8-z9I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jib-R6-LbH">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="dbW-JV-b4Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="jib-R6-LbH" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" constant="187" id="7f7-C2-n9W"/>
                             <constraint firstItem="vWa-pe-Fby" firstAttribute="top" secondItem="vyk-xF-FHO" secondAttribute="bottom" constant="151" id="7lm-Cb-xOU"/>
+                            <constraint firstItem="9oF-ez-7CV" firstAttribute="top" secondItem="y67-m0-zlC" secondAttribute="top" id="8ID-ST-2DW"/>
                             <constraint firstItem="vyk-xF-FHO" firstAttribute="top" secondItem="y67-m0-zlC" secondAttribute="top" constant="15" id="A7u-tw-bZF"/>
                             <constraint firstItem="J1B-D0-tvx" firstAttribute="top" secondItem="aIP-cX-k1s" secondAttribute="bottom" constant="8" id="EV3-zk-CqB"/>
+                            <constraint firstItem="y67-m0-zlC" firstAttribute="trailing" secondItem="9oF-ez-7CV" secondAttribute="trailing" constant="187.5" id="HWt-Ps-AUJ"/>
                             <constraint firstItem="vWa-pe-Fby" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="ICg-Q7-aUC"/>
                             <constraint firstItem="vWa-pe-Fby" firstAttribute="top" secondItem="UWQ-da-KTk" secondAttribute="bottom" constant="55" id="Lxj-G4-BzM"/>
+                            <constraint firstItem="y67-m0-zlC" firstAttribute="trailing" secondItem="jib-R6-LbH" secondAttribute="trailing" constant="0.5" id="M1j-et-akO"/>
                             <constraint firstItem="uzd-Rh-vsu" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="O84-6G-n8x"/>
                             <constraint firstItem="UWQ-da-KTk" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="PSl-bZ-dGM"/>
                             <constraint firstItem="J1B-D0-tvx" firstAttribute="top" secondItem="uzd-Rh-vsu" secondAttribute="bottom" constant="8" id="QTh-zc-huv"/>
+                            <constraint firstItem="9oF-ez-7CV" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="VDi-bd-eHu"/>
+                            <constraint firstItem="UWQ-da-KTk" firstAttribute="top" secondItem="9oF-ez-7CV" secondAttribute="bottom" constant="49" id="Xoi-JV-9TL"/>
                             <constraint firstItem="J1B-D0-tvx" firstAttribute="trailing" secondItem="y67-m0-zlC" secondAttribute="trailing" id="YLH-4m-CbJ"/>
                             <constraint firstItem="aIP-cX-k1s" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="a9H-o9-KJ0"/>
                             <constraint firstItem="aIP-cX-k1s" firstAttribute="trailing" secondItem="y67-m0-zlC" secondAttribute="trailing" id="d5s-7m-X9S"/>
@@ -640,6 +788,8 @@
                             <constraint firstItem="J1B-D0-tvx" firstAttribute="leading" secondItem="y67-m0-zlC" secondAttribute="leading" id="dZZ-kr-gSP"/>
                             <constraint firstItem="y67-m0-zlC" firstAttribute="trailing" secondItem="vyk-xF-FHO" secondAttribute="trailing" constant="54" id="h0v-Cp-T3o"/>
                             <constraint firstItem="vWa-pe-Fby" firstAttribute="trailing" secondItem="y67-m0-zlC" secondAttribute="trailing" id="mhz-jl-ajm"/>
+                            <constraint firstItem="jib-R6-LbH" firstAttribute="top" secondItem="y67-m0-zlC" secondAttribute="top" id="nca-HO-nhq"/>
+                            <constraint firstItem="UWQ-da-KTk" firstAttribute="top" secondItem="jib-R6-LbH" secondAttribute="bottom" constant="49" id="paS-yZ-ppU"/>
                             <constraint firstItem="uzd-Rh-vsu" firstAttribute="trailing" secondItem="y67-m0-zlC" secondAttribute="trailing" id="sGq-SJ-M3Q"/>
                             <constraint firstItem="UWQ-da-KTk" firstAttribute="trailing" secondItem="y67-m0-zlC" secondAttribute="trailing" id="tbw-5W-oXD"/>
                             <constraint firstItem="J1B-D0-tvx" firstAttribute="bottom" secondItem="y67-m0-zlC" secondAttribute="bottom" id="tph-45-CGC"/>
@@ -661,10 +811,10 @@
             </objects>
             <point key="canvasLocation" x="3149.5999999999999" y="1790.5547226386807"/>
         </scene>
-        <!--Level8 View Controller-->
+        <!--Level 8-->
         <scene sceneID="3ip-xX-DL9">
             <objects>
-                <viewController id="rDG-VA-Rxr" customClass="Level8_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 8" id="rDG-VA-Rxr" customClass="Level8_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bHT-hv-nhE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -737,22 +887,52 @@
                                     <action selector="StopActionLvl8:" destination="rDG-VA-Rxr" eventType="touchUpInside" id="bDL-oI-mYh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZc-6S-NLQ">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Tutorial8:" destination="rDG-VA-Rxr" eventType="touchUpInside" id="deJ-xR-g1C"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3yf-1S-wms">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="JKC-w2-DkM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="TW1-3o-VQ4" firstAttribute="top" secondItem="YyQ-dr-cFz" secondAttribute="bottom" constant="8" id="0jr-BP-p44"/>
                             <constraint firstItem="JRo-23-fUT" firstAttribute="trailing" secondItem="3tG-4v-jQ9" secondAttribute="trailing" id="1ba-m8-Vd8"/>
                             <constraint firstItem="hi5-Ta-WuR" firstAttribute="top" secondItem="3tG-4v-jQ9" secondAttribute="top" constant="14" id="3zU-h7-CHa"/>
+                            <constraint firstItem="tZc-6S-NLQ" firstAttribute="top" secondItem="3tG-4v-jQ9" secondAttribute="top" id="4mw-9I-JOP"/>
                             <constraint firstItem="TW1-3o-VQ4" firstAttribute="bottom" secondItem="3tG-4v-jQ9" secondAttribute="bottom" id="64r-0A-Z5C"/>
+                            <constraint firstItem="tZc-6S-NLQ" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" id="8eJ-SO-rb3"/>
                             <constraint firstItem="eyf-0u-agD" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" id="Cpc-Kn-xd5"/>
                             <constraint firstItem="eyf-0u-agD" firstAttribute="trailing" secondItem="3tG-4v-jQ9" secondAttribute="trailing" id="Ksm-Hc-Ej3"/>
                             <constraint firstItem="TW1-3o-VQ4" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" id="QUJ-WX-DK6"/>
+                            <constraint firstItem="JRo-23-fUT" firstAttribute="top" secondItem="3yf-1S-wms" secondAttribute="bottom" constant="51" id="TZn-3T-U7r"/>
                             <constraint firstItem="hi5-Ta-WuR" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" constant="53" id="Taz-Hp-0SR"/>
+                            <constraint firstItem="3yf-1S-wms" firstAttribute="top" secondItem="3tG-4v-jQ9" secondAttribute="top" id="VmB-gK-bys"/>
                             <constraint firstItem="YyQ-dr-cFz" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" id="YPj-3D-9gw"/>
                             <constraint firstItem="eyf-0u-agD" firstAttribute="top" secondItem="hi5-Ta-WuR" secondAttribute="bottom" constant="152" id="YUZ-7z-wtE"/>
                             <constraint firstItem="eyf-0u-agD" firstAttribute="top" secondItem="JRo-23-fUT" secondAttribute="bottom" constant="53" id="ZT2-F7-BLL"/>
+                            <constraint firstItem="3tG-4v-jQ9" firstAttribute="trailing" secondItem="3yf-1S-wms" secondAttribute="trailing" constant="0.5" id="ZyH-XX-Tr6"/>
+                            <constraint firstItem="3tG-4v-jQ9" firstAttribute="trailing" secondItem="tZc-6S-NLQ" secondAttribute="trailing" constant="187.5" id="aeE-Hv-RTs"/>
+                            <constraint firstItem="JRo-23-fUT" firstAttribute="top" secondItem="tZc-6S-NLQ" secondAttribute="bottom" constant="51" id="eTd-dm-Dr7"/>
                             <constraint firstItem="YyQ-dr-cFz" firstAttribute="trailing" secondItem="3tG-4v-jQ9" secondAttribute="trailing" id="iXR-1D-UG3"/>
                             <constraint firstItem="TW1-3o-VQ4" firstAttribute="trailing" secondItem="3tG-4v-jQ9" secondAttribute="trailing" id="mAz-YT-qky"/>
+                            <constraint firstItem="3yf-1S-wms" firstAttribute="leading" secondItem="3tG-4v-jQ9" secondAttribute="leading" constant="187" id="obs-rf-xSn"/>
                             <constraint firstItem="3tG-4v-jQ9" firstAttribute="trailing" secondItem="hi5-Ta-WuR" secondAttribute="trailing" constant="54" id="tPe-q8-GhX"/>
                             <constraint firstItem="YyQ-dr-cFz" firstAttribute="top" secondItem="eyf-0u-agD" secondAttribute="bottom" constant="8" id="ucy-CS-72i"/>
                             <constraint firstItem="JRo-23-fUT" firstAttribute="top" secondItem="3tG-4v-jQ9" secondAttribute="top" constant="91" id="vb3-ln-nIp"/>
@@ -773,10 +953,10 @@
             </objects>
             <point key="canvasLocation" x="3853.5999999999999" y="1788.7556221889056"/>
         </scene>
-        <!--Level9 View Controller-->
+        <!--Level 9-->
         <scene sceneID="7ta-Xh-1FQ">
             <objects>
-                <viewController id="5Jv-ud-1L4" customClass="Level9_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 9" id="5Jv-ud-1L4" customClass="Level9_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="REm-Cv-W2S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -849,22 +1029,52 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyj-CB-FYy">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Tutorial">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Tutorial9:" destination="5Jv-ud-1L4" eventType="touchUpInside" id="R6g-re-KRm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktk-HV-Evz">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
+                                <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <state key="normal" title="Home">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="gnM-AK-d4c"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.47684186699999997" blue="0.59874066449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bIE-Ya-6Vl" firstAttribute="trailing" secondItem="Iyj-CB-FYy" secondAttribute="trailing" constant="187.5" id="0c0-fg-Vlo"/>
                             <constraint firstItem="1OS-9l-LQv" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" id="20c-fB-M2J"/>
                             <constraint firstItem="ruH-TY-EEu" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" id="21j-44-q8d"/>
                             <constraint firstItem="1OS-9l-LQv" firstAttribute="trailing" secondItem="bIE-Ya-6Vl" secondAttribute="trailing" id="4Ef-Q0-iin"/>
                             <constraint firstItem="6Zz-sO-qed" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" id="4JF-XE-ioE"/>
                             <constraint firstItem="6Zz-sO-qed" firstAttribute="top" secondItem="1OS-9l-LQv" secondAttribute="bottom" constant="8" id="6B9-0Z-BQx"/>
                             <constraint firstItem="6Zz-sO-qed" firstAttribute="bottom" secondItem="bIE-Ya-6Vl" secondAttribute="bottom" id="8gx-UD-gxu"/>
+                            <constraint firstItem="ktk-HV-Evz" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" constant="187" id="Bt2-Dk-6Kc"/>
+                            <constraint firstItem="6kc-oz-wZ3" firstAttribute="top" secondItem="ktk-HV-Evz" secondAttribute="bottom" constant="55" id="CBD-b6-lmq"/>
                             <constraint firstItem="ZAG-c7-XfF" firstAttribute="top" secondItem="bIE-Ya-6Vl" secondAttribute="top" constant="17" id="DZX-kP-3M7"/>
+                            <constraint firstItem="Iyj-CB-FYy" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" id="FuK-QR-FNl"/>
                             <constraint firstItem="yrB-7O-otm" firstAttribute="top" secondItem="ZAG-c7-XfF" secondAttribute="bottom" constant="149" id="Hr8-c5-u8t"/>
                             <constraint firstItem="6kc-oz-wZ3" firstAttribute="trailing" secondItem="bIE-Ya-6Vl" secondAttribute="trailing" id="INT-Qf-2xb"/>
+                            <constraint firstItem="Iyj-CB-FYy" firstAttribute="top" secondItem="bIE-Ya-6Vl" secondAttribute="top" id="M4s-v0-KVz"/>
                             <constraint firstItem="ZAG-c7-XfF" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" constant="53" id="Skx-tK-TK2"/>
+                            <constraint firstItem="ktk-HV-Evz" firstAttribute="top" secondItem="bIE-Ya-6Vl" secondAttribute="top" id="TlA-1y-pef"/>
                             <constraint firstItem="yrB-7O-otm" firstAttribute="trailing" secondItem="bIE-Ya-6Vl" secondAttribute="trailing" id="UAy-AE-hov"/>
                             <constraint firstItem="bIE-Ya-6Vl" firstAttribute="trailing" secondItem="ZAG-c7-XfF" secondAttribute="trailing" constant="54" id="XCw-LF-m9R"/>
                             <constraint firstItem="yrB-7O-otm" firstAttribute="leading" secondItem="bIE-Ya-6Vl" secondAttribute="leading" id="Y4u-JU-Rnk"/>
+                            <constraint firstItem="bIE-Ya-6Vl" firstAttribute="trailing" secondItem="ktk-HV-Evz" secondAttribute="trailing" constant="0.5" id="dr6-0S-KvU"/>
+                            <constraint firstItem="6kc-oz-wZ3" firstAttribute="top" secondItem="Iyj-CB-FYy" secondAttribute="bottom" constant="55" id="m4n-Mb-2vT"/>
                             <constraint firstItem="ruH-TY-EEu" firstAttribute="top" secondItem="yrB-7O-otm" secondAttribute="bottom" constant="8" id="n3o-MB-8QW"/>
                             <constraint firstItem="6Zz-sO-qed" firstAttribute="top" secondItem="ruH-TY-EEu" secondAttribute="bottom" constant="8" id="nq7-iy-aRb"/>
                             <constraint firstItem="6Zz-sO-qed" firstAttribute="trailing" secondItem="bIE-Ya-6Vl" secondAttribute="trailing" id="pL4-6I-7z0"/>
@@ -888,10 +1098,57 @@
             </objects>
             <point key="canvasLocation" x="4594" y="1789"/>
         </scene>
-        <!--Level2 View Controller-->
+        <!--View Controller-->
+        <scene sceneID="IIZ-kA-dkA">
+            <objects>
+                <viewController id="gQy-ip-cP2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HdA-5D-H8R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dAl-R0-sJh">
+                                <rect key="frame" x="0.0" y="585" width="375" height="82"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82" id="wCh-er-Z3b"/>
+                                    <constraint firstAttribute="width" constant="375" id="yU7-4d-ZXx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <state key="normal" title="Back to Home Screen">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PKO-KA-fHX" kind="show" id="vFY-ZM-aEt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1An-aw-wYC">
+                                <rect key="frame" x="11" y="255" width="352" height="156"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dAl-R0-sJh" firstAttribute="leading" secondItem="72i-rF-qaC" secondAttribute="leading" id="FnI-hF-69r"/>
+                            <constraint firstItem="dAl-R0-sJh" firstAttribute="bottom" secondItem="72i-rF-qaC" secondAttribute="bottom" id="FoO-tq-apF"/>
+                            <constraint firstItem="dAl-R0-sJh" firstAttribute="trailing" secondItem="72i-rF-qaC" secondAttribute="trailing" id="Msj-Fn-odB"/>
+                            <constraint firstItem="dAl-R0-sJh" firstAttribute="top" secondItem="1An-aw-wYC" secondAttribute="bottom" constant="174" id="Yam-bR-diX"/>
+                            <constraint firstItem="1An-aw-wYC" firstAttribute="top" secondItem="72i-rF-qaC" secondAttribute="top" constant="235" id="dpc-EO-zyk"/>
+                            <constraint firstItem="72i-rF-qaC" firstAttribute="trailing" secondItem="1An-aw-wYC" secondAttribute="trailing" constant="12" id="eC2-JN-UJr"/>
+                            <constraint firstItem="1An-aw-wYC" firstAttribute="leading" secondItem="72i-rF-qaC" secondAttribute="leading" constant="11" id="uiH-dL-kex"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="72i-rF-qaC"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ypR-BC-QeQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5317.6000000000004" y="1791.4542728635683"/>
+        </scene>
+        <!--Level 2-->
         <scene sceneID="MUa-n0-7sH">
             <objects>
-                <viewController id="bTs-Tp-RGC" customClass="Level2_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 2" id="bTs-Tp-RGC" customClass="Level2_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vj5-KG-wlJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -961,8 +1218,8 @@
                                     <action selector="StartActionLvl2:" destination="bTs-Tp-RGC" eventType="touchUpInside" id="v7C-wq-KF2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tee-69-oHc">
-                                <rect key="frame" x="185" y="64" width="195" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tee-69-oHc">
+                                <rect key="frame" x="187" y="64" width="187.5" height="40"/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="188" id="jfB-n3-RHm"/>
@@ -974,8 +1231,8 @@
                                     <segue destination="PKO-KA-fHX" kind="show" id="0tu-h8-nqK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-Vm-dF3">
-                                <rect key="frame" x="0.0" y="64" width="195" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N8-Vm-dF3">
+                                <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
                                 <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="1Dd-VQ-dKC"/>
@@ -1031,10 +1288,10 @@
             </objects>
             <point key="canvasLocation" x="1109.5999999999999" y="1021.4392803598201"/>
         </scene>
-        <!--Level1 View Controller-->
+        <!--Level 1-->
         <scene sceneID="Wln-ZU-Kn8">
             <objects>
-                <viewController id="sj7-EL-JIZ" customClass="Level1_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 1" id="sj7-EL-JIZ" customClass="Level1_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L3Q-E2-fGi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1112,18 +1369,23 @@
                                     <segue destination="bTs-Tp-RGC" kind="show" id="tfm-kD-GTi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-6S-zWD">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNh-6S-zWD">
                                 <rect key="frame" x="0.0" y="64" width="187" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.89019607840000003" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187" id="MxR-Ni-s4q"/>
+                                    <constraint firstAttribute="height" constant="40" id="nYc-SJ-VCq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Tutorial ">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="TutorialAction:" destination="sj7-EL-JIZ" eventType="touchUpInside" id="lGo-c4-TAK"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-eY-BjX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSx-eY-BjX">
                                 <rect key="frame" x="187" y="64" width="187.5" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.62352941179999999" green="0.98431372549999996" blue="0.63529411759999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                 <state key="normal" title="Home">
@@ -1135,21 +1397,29 @@
                         <constraints>
                             <constraint firstItem="pU7-lF-1rX" firstAttribute="top" secondItem="RhF-LD-gaW" secondAttribute="bottom" constant="92" id="3oE-Os-QMR"/>
                             <constraint firstItem="oId-S6-1Ff" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" id="6bZ-Mk-Dgs"/>
+                            <constraint firstItem="aaf-ah-82A" firstAttribute="trailing" secondItem="TSx-eY-BjX" secondAttribute="trailing" constant="0.5" id="7Nz-hg-dtN"/>
                             <constraint firstItem="RhF-LD-gaW" firstAttribute="top" secondItem="O3V-WU-zVs" secondAttribute="bottom" constant="29" id="7P4-of-2Sl"/>
                             <constraint firstItem="pU7-lF-1rX" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" id="7tJ-26-w56"/>
                             <constraint firstItem="oId-S6-1Ff" firstAttribute="bottom" secondItem="aaf-ah-82A" secondAttribute="bottom" id="DDw-N1-6zM"/>
                             <constraint firstItem="e5y-mr-Rbr" firstAttribute="trailing" secondItem="aaf-ah-82A" secondAttribute="trailing" id="KRk-Lv-nDV"/>
                             <constraint firstItem="e5y-mr-Rbr" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" id="LaU-xw-XMQ"/>
+                            <constraint firstItem="O3V-WU-zVs" firstAttribute="top" secondItem="TSx-eY-BjX" secondAttribute="bottom" constant="30" id="P1d-ax-RNo"/>
+                            <constraint firstItem="TSx-eY-BjX" firstAttribute="leading" secondItem="JNh-6S-zWD" secondAttribute="trailing" id="T7g-gR-jFh"/>
                             <constraint firstItem="oId-S6-1Ff" firstAttribute="trailing" secondItem="aaf-ah-82A" secondAttribute="trailing" id="Un7-uY-QWh"/>
                             <constraint firstItem="aaf-ah-82A" firstAttribute="trailing" secondItem="RhF-LD-gaW" secondAttribute="trailing" constant="2" id="V6L-Wt-VVK"/>
                             <constraint firstItem="RhF-LD-gaW" firstAttribute="top" secondItem="O3V-WU-zVs" secondAttribute="bottom" constant="29" id="V8v-ok-M7o"/>
                             <constraint firstItem="aaf-ah-82A" firstAttribute="bottom" secondItem="FOa-h7-Hpe" secondAttribute="bottom" constant="100" id="ahz-vK-kcu"/>
                             <constraint firstItem="aaf-ah-82A" firstAttribute="trailing" secondItem="O3V-WU-zVs" secondAttribute="trailing" constant="131" id="esW-9v-gbR"/>
+                            <constraint firstItem="JNh-6S-zWD" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" id="iak-4x-APe"/>
                             <constraint firstItem="oId-S6-1Ff" firstAttribute="top" secondItem="pU7-lF-1rX" secondAttribute="bottom" constant="98" id="iha-28-2do"/>
                             <constraint firstItem="aaf-ah-82A" firstAttribute="bottom" secondItem="e5y-mr-Rbr" secondAttribute="bottom" constant="100" id="ioA-zP-9Gb"/>
                             <constraint firstItem="FOa-h7-Hpe" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" id="j60-aU-kpV"/>
+                            <constraint firstItem="O3V-WU-zVs" firstAttribute="top" secondItem="JNh-6S-zWD" secondAttribute="bottom" constant="30" id="jnT-2i-huh"/>
+                            <constraint firstItem="TSx-eY-BjX" firstAttribute="leading" secondItem="JNh-6S-zWD" secondAttribute="trailing" id="nYk-yM-j3P"/>
                             <constraint firstItem="RhF-LD-gaW" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" constant="2" id="pQ5-cd-TNj"/>
+                            <constraint firstItem="JNh-6S-zWD" firstAttribute="top" secondItem="aaf-ah-82A" secondAttribute="top" id="pvN-Fh-PfG"/>
                             <constraint firstItem="O3V-WU-zVs" firstAttribute="top" secondItem="aaf-ah-82A" secondAttribute="top" constant="70" id="qn5-QR-ZI5"/>
+                            <constraint firstItem="TSx-eY-BjX" firstAttribute="top" secondItem="aaf-ah-82A" secondAttribute="top" id="tIg-pZ-0XB"/>
                             <constraint firstItem="pU7-lF-1rX" firstAttribute="trailing" secondItem="aaf-ah-82A" secondAttribute="trailing" id="udx-TJ-gaG"/>
                             <constraint firstItem="O3V-WU-zVs" firstAttribute="leading" secondItem="aaf-ah-82A" secondAttribute="leading" constant="147" id="w4t-tC-TqX"/>
                             <constraint firstItem="FOa-h7-Hpe" firstAttribute="trailing" secondItem="aaf-ah-82A" secondAttribute="trailing" id="yTi-ue-d4P"/>
@@ -1169,10 +1439,10 @@
             </objects>
             <point key="canvasLocation" x="1792.8" y="1022.3388305847077"/>
         </scene>
-        <!--General Mode View Controller-->
+        <!--General Mode-->
         <scene sceneID="nBf-Dz-Sap">
             <objects>
-                <viewController id="90A-WW-eQG" customClass="GeneralModeViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="General Mode" id="90A-WW-eQG" customClass="GeneralModeViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EBr-0p-C0e">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1275,10 +1545,10 @@
             </objects>
             <point key="canvasLocation" x="1496.8" y="-262.21889055472263"/>
         </scene>
-        <!--Multiplayer View Controller-->
+        <!--Multiplayer-->
         <scene sceneID="tME-RZ-3hE">
             <objects>
-                <viewController id="H0l-HS-nht" customClass="MultiplayerViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Multiplayer" id="H0l-HS-nht" customClass="MultiplayerViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Gm-wU-rZk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1449,4 +1719,7 @@
             <point key="canvasLocation" x="2309.5999999999999" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vFY-ZM-aEt"/>
+    </inferredMetricsTieBreakers>
 </document>

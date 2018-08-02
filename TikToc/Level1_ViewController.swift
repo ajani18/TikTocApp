@@ -14,6 +14,10 @@ class Level1_ViewController: UIViewController {
     var Score = 0
     var Highscore123 = 100000000000
     
+    @IBAction func TutorialAction(_ sender: Any) {
+        createAlert(title: "Level 1", message: "Start. Stop. Reset. its as Easy as That")
+    }
+    
     @IBOutlet weak var resetLvl1: UIButton!
     
     @IBOutlet weak var startLvl1: UIButton!
@@ -41,14 +45,14 @@ class Level1_ViewController: UIViewController {
         Score += 1
         
         //Set counter in UILabel
-        ScoreLblLvl1.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLblLvl1.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
     }
     
     @IBAction func ResetActionLevel1(_ sender: Any) {
         Score = 0
         StopActionLevel1(sender)
-        ScoreLblLvl1.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLblLvl1.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
         stopLvl1.isHidden = true
         startLvl1.isHidden = false
@@ -64,7 +68,7 @@ class Level1_ViewController: UIViewController {
         
         if ((Highscore123 > Score) && (Score != 0))  {
             Highscore123 = Score
-            highScoreLvl1.text = String(format: "%02d:%02d:%02d", Highscore123 / 3600, (Highscore123 % 3600) / 60, (Highscore123 % 3600) % 60)
+            highScoreLvl1.text = String(format: "%02d:%02d.%02d", Highscore123 / 3600, (Highscore123 % 3600) / 60, (Highscore123 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore123, forKey: "Highscore123")
             HighscoreDefault.synchronize()
@@ -103,7 +107,7 @@ class Level1_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123") != nil) {
             Highscore123 = HighscoreDefault.value(forKey: "Highscore123") as! Int
-            highScoreLvl1.text = String(format: "%02d:%02d:%02d", Highscore123 / 3600, (Highscore123 % 3600) / 60, (Highscore123 % 3600) % 60)
+            highScoreLvl1.text = String(format: "%02d:%02d.%02d", Highscore123 / 3600, (Highscore123 % 3600) / 60, (Highscore123 % 3600) % 60)
             
         }
         
@@ -131,6 +135,16 @@ class Level1_ViewController: UIViewController {
 
         
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

@@ -28,7 +28,7 @@ class Level2_ViewController: UIViewController {
     
     @IBAction func TutorialLvl2(_ sender: Any) {
         
-        createAlert(title: "Level 2 Tutorial", message: "Try to be Fast as the Stop Button is going to Appear Randomly")
+        createAlert(title: "Level 2 Tutorial", message: "The Stop Button will appear randomly and get a time below 2.0 seconds")
         
     }
     
@@ -62,7 +62,7 @@ class Level2_ViewController: UIViewController {
         Score += 1
         
         //Set counter in UILabel
-        ScoreLabelLvl2.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLabelLvl2.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
     }
     
@@ -71,7 +71,7 @@ class Level2_ViewController: UIViewController {
         
         if ((Highscorelvl2 > Score) && (Score != 0))  {
             Highscorelvl2 = Score
-            HighScoreLvl2.text = String(format: "%02d:%02d:%02d", Highscorelvl2 / 3600, (Highscorelvl2 % 3600) / 60, (Highscorelvl2 % 3600) % 60)
+            HighScoreLvl2.text = String(format: "%02d:%02d.%02d", Highscorelvl2 / 3600, (Highscorelvl2 % 3600) / 60, (Highscorelvl2 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscorelvl2, forKey: "Highscorelvl2")
             HighscoreDefault.synchronize()
@@ -115,7 +115,7 @@ class Level2_ViewController: UIViewController {
     @IBAction func ResetActionLvl2(_ sender: Any) {
         Score = 0
         StopActionLvl2(sender)
-        ScoreLabelLvl2.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLabelLvl2.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
         stopLvl2.isHidden = true
         startLvl2.isHidden = false
@@ -135,7 +135,7 @@ class Level2_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscorelvl2") != nil) {
             Highscorelvl2 = HighscoreDefault.value(forKey: "Highscorelvl2") as! Int
-            HighScoreLvl2.text = String(format: "%02d:%02d:%02d", Highscorelvl2 / 3600, (Highscorelvl2 % 3600) / 60, (Highscorelvl2 % 3600) % 60)
+            HighScoreLvl2.text = String(format: "%02d:%02d.%02d", Highscorelvl2 / 3600, (Highscorelvl2 % 3600) / 60, (Highscorelvl2 % 3600) % 60)
             
         }
         

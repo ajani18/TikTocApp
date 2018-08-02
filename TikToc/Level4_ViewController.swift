@@ -14,6 +14,12 @@ class Level4_ViewController: UIViewController {
     var Score45 = 0
     var Highscore4 = 100000000000
     
+
+    @IBAction func TutorialAction4(_ sender: Any) {
+        createAlert(title: "Level 4", message: "Hit Start. Stop. Reset. and get below 0.35 seconds")
+    }
+    
+    
     @IBOutlet weak var ScoreLabelLvl4: UILabel!
     
     @IBOutlet weak var ResetLvl4: UIButton!
@@ -40,7 +46,7 @@ class Level4_ViewController: UIViewController {
         Score45 += 1
         
         //Set counter in UILabel
-        ScoreLabelLvl4.text! = String(format: "%02d:%02d:%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
+        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
         
     }
     
@@ -49,7 +55,7 @@ class Level4_ViewController: UIViewController {
         
         if ((Highscore4 > Score45) && (Score45 != 0))  {
             Highscore4 = Score45
-            HighScoreLblLvl4.text = String(format: "%02d:%02d:%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
+            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore4, forKey: "Highscore456")
             HighscoreDefault.synchronize()
@@ -91,7 +97,7 @@ class Level4_ViewController: UIViewController {
     @IBAction func ResetActionLvl4(_ sender: Any) {
         Score45 = 0
         StopActionLvl4(sender)
-        ScoreLabelLvl4.text! = String(format: "%02d:%02d:%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
+        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
         
         StopLvl4.isHidden = true
         StartLvl4.isHidden = false
@@ -111,7 +117,7 @@ class Level4_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore456") != nil) {
             Highscore4 = HighscoreDefault.value(forKey: "Highscore456") as! Int
-            HighScoreLblLvl4.text = String(format: "%02d:%02d:%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
+            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
             
         }
         
@@ -147,6 +153,16 @@ class Level4_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 

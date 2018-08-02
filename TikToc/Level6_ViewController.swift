@@ -14,6 +14,9 @@ class Level6_ViewController: UIViewController {
     var Score6 = 0
     var Highscore6 = 100000000000
 
+    @IBAction func Tutorial6(_ sender: Any) {
+        createAlert(title: "Level 6", message: "This level is about accuracy, try to get between 0.3 & 0.4 seconds")
+    }
     @IBOutlet weak var ScoreLblLvl6: UILabel!
     
     @IBOutlet weak var StartLvl6: UIButton!
@@ -51,7 +54,7 @@ class Level6_ViewController: UIViewController {
         
         if (Score6 > 30 && Score6 < 40){
             Highscore6 = Score6
-            HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
+            HighScoreLbl.text = String(format: "%02d:%02d.%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore6, forKey: "Highscore678")
             HighscoreDefault.synchronize()
@@ -67,7 +70,7 @@ class Level6_ViewController: UIViewController {
     @IBAction func ResetActionLvl6(_ sender: Any) {
         Score6 = 0
         StopActionLevel6(sender)
-        ScoreLblLvl6.text! = String(format: "%02d:%02d:%02d", Score6 / 3600, (Score6 % 3600) / 60, (Score6 % 3600) % 60)
+        ScoreLblLvl6.text! = String(format: "%02d:%02d.%02d", Score6 / 3600, (Score6 % 3600) / 60, (Score6 % 3600) % 60)
         
         StopLvl6.isHidden = true
         StartLvl6.isHidden = false
@@ -91,7 +94,7 @@ class Level6_ViewController: UIViewController {
         Score6 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl6.text! = String(format: "%02d:%02d:%02d", Score6 / 3600, (Score6 % 3600) / 60, (Score6 % 3600) % 60)
+        ScoreLblLvl6.text! = String(format: "%02d:%02d.%02d", Score6 / 3600, (Score6 % 3600) / 60, (Score6 % 3600) % 60)
         
     }
     
@@ -101,7 +104,7 @@ class Level6_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore678") != nil) {
             Highscore6 = HighscoreDefault.value(forKey: "Highscore678") as! Int
-            HighScoreLbl.text = String(format: "%02d:%02d:%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
+            HighScoreLbl.text = String(format: "%02d:%02d.%02d", Highscore6 / 3600, (Highscore6 % 3600) / 60, (Highscore6 % 3600) % 60)
             
         }
         
@@ -125,6 +128,16 @@ class Level6_ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func createAlert (title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "Continue to Game", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
     }
     
 
