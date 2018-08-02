@@ -104,7 +104,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         stop2.isEnabled = false
         start2.isEnabled = false
         
-        directionWinnerLbl.text = "Now Hit Stop"
+//        directionWinnerLbl.text = "Now Hit Stop"
         
     }
     
@@ -112,7 +112,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         Score += 1
         
         //Set counter in UILabel
-        ScoreLbl.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
     }
     
@@ -142,14 +142,14 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
          directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
-        directionWinnerLbl.text = "It is Your Turn: Hit Start"
+        directionWinnerLbl.text = "Hit Star then Stop"
 
     }
     
     @IBAction func ResetAction(_ sender: Any) {
         Score = 0
         StopAction(sender)
-        ScoreLbl.text! = String(format: "%02d:%02d:%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
         
         stop.isHidden = true
         start.isHidden = false
@@ -177,7 +177,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         
         directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
-        directionWinnerLbl.text = "Now Hit Stop"
+//        directionWinnerLbl.text = "Now Hit Stop"
 
         
         
@@ -187,7 +187,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         Score2 += 1
         
         //Set counter in UILabel
-        ScoreLbl2.text! = String(format: "%02d:%02d:%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
+        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
         
     }
     
@@ -238,7 +238,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ResetAction2(_ sender: Any) {
         Score2 = 0
         StopAction2(sender)
-        ScoreLbl2.text! = String(format: "%02d:%02d:%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
+        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
         
         stop2.isHidden = true
         start2.isHidden = false
@@ -269,7 +269,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        directionWinnerLbl.text = "You can Star the Game"
+        directionWinnerLbl.text = "Hit Start then Stop"
         
 //        player2Label.isHidden = false
         

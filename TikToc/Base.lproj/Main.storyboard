@@ -1028,6 +1028,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="gQy-ip-cP2" kind="show" id="ywB-jX-1cP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyj-CB-FYy">
                                 <rect key="frame" x="0.0" y="64" width="187.5" height="40"/>
@@ -1122,7 +1125,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congrats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1An-aw-wYC">
-                                <rect key="frame" x="11" y="255" width="352" height="156"/>
+                                <rect key="frame" x="11" y="299" width="352" height="112"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1159,6 +1162,15 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-1k-f4o">
+                                <rect key="frame" x="0.0" y="476" width="107" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="StopActionLvl2:" destination="bTs-Tp-RGC" eventType="touchUpInside" id="rEX-RH-CdL"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kc-OT-g3R">
                                 <rect key="frame" x="139" y="134" width="96.5" height="23.5"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
@@ -1193,14 +1205,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="Pz4-ub-Lgt" kind="show" id="1Jz-MS-7ot"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GA6-1k-f4o">
-                                <rect key="frame" x="16" y="308" width="107" height="51"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="55"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="StopActionLvl2:" destination="bTs-Tp-RGC" eventType="touchUpInside" id="rEX-RH-CdL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lj4-iD-cVl">
@@ -1249,7 +1253,6 @@
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Fxe-ie-b5K" firstAttribute="trailing" secondItem="2kc-OT-g3R" secondAttribute="trailing" constant="139.5" id="1pz-5j-Htc"/>
-                            <constraint firstItem="msp-M7-dkV" firstAttribute="trailing" secondItem="Fxe-ie-b5K" secondAttribute="trailing" id="4iq-oK-sIM"/>
                             <constraint firstItem="2kc-OT-g3R" firstAttribute="top" secondItem="Fxe-ie-b5K" secondAttribute="top" constant="70" id="4jq-G8-Og4"/>
                             <constraint firstItem="5N8-Vm-dF3" firstAttribute="top" secondItem="Fxe-ie-b5K" secondAttribute="top" id="4oB-CN-CiN"/>
                             <constraint firstItem="2kc-OT-g3R" firstAttribute="top" secondItem="5N8-Vm-dF3" secondAttribute="bottom" constant="30" id="4rd-KO-2YK"/>
@@ -1257,15 +1260,16 @@
                             <constraint firstItem="Tee-69-oHc" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" constant="187" id="6s8-0U-Xe2"/>
                             <constraint firstItem="xKM-BQ-uqz" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" id="9NO-2N-wRc"/>
                             <constraint firstItem="2kc-OT-g3R" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" constant="139" id="BDK-LU-IZp"/>
+                            <constraint firstItem="msp-M7-dkV" firstAttribute="trailing" secondItem="Fxe-ie-b5K" secondAttribute="trailing" id="DUt-Ep-W0k"/>
                             <constraint firstItem="xFi-Xw-foQ" firstAttribute="top" secondItem="Lj4-iD-cVl" secondAttribute="bottom" id="G7Q-dT-HHT"/>
-                            <constraint firstItem="GA6-1k-f4o" firstAttribute="top" secondItem="msp-M7-dkV" secondAttribute="bottom" constant="31" id="KtT-Bs-gZc"/>
                             <constraint firstItem="xFi-Xw-foQ" firstAttribute="bottom" secondItem="Fxe-ie-b5K" secondAttribute="bottom" id="QDh-tj-eY0"/>
-                            <constraint firstItem="msp-M7-dkV" firstAttribute="top" secondItem="2kc-OT-g3R" secondAttribute="bottom" constant="31.5" id="UmY-Ua-4cF"/>
                             <constraint firstItem="Lj4-iD-cVl" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" id="VFP-4H-qCN"/>
                             <constraint firstItem="2kc-OT-g3R" firstAttribute="top" secondItem="Tee-69-oHc" secondAttribute="bottom" constant="30" id="W4L-TJ-zXl"/>
+                            <constraint firstItem="xKM-BQ-uqz" firstAttribute="top" secondItem="msp-M7-dkV" secondAttribute="bottom" constant="90" id="a9p-9d-sfX"/>
+                            <constraint firstItem="msp-M7-dkV" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" id="cxj-nn-fpa"/>
                             <constraint firstItem="xKM-BQ-uqz" firstAttribute="trailing" secondItem="Fxe-ie-b5K" secondAttribute="trailing" id="djq-fI-jeh"/>
                             <constraint firstItem="xFi-Xw-foQ" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" id="e9H-Uv-mSg"/>
-                            <constraint firstItem="msp-M7-dkV" firstAttribute="leading" secondItem="Fxe-ie-b5K" secondAttribute="leading" id="hhB-gp-7VY"/>
+                            <constraint firstItem="msp-M7-dkV" firstAttribute="top" secondItem="2kc-OT-g3R" secondAttribute="bottom" constant="31.5" id="gCx-mM-xsy"/>
                             <constraint firstItem="Fxe-ie-b5K" firstAttribute="trailing" secondItem="5N8-Vm-dF3" secondAttribute="trailing" constant="187.5" id="hmu-fU-bCb"/>
                             <constraint firstItem="xFi-Xw-foQ" firstAttribute="trailing" secondItem="Fxe-ie-b5K" secondAttribute="trailing" id="ikN-SW-THQ"/>
                             <constraint firstItem="xFi-Xw-foQ" firstAttribute="top" secondItem="xKM-BQ-uqz" secondAttribute="bottom" constant="98" id="rcl-Hf-a4w"/>
@@ -1334,7 +1338,7 @@
                                     <constraint firstAttribute="width" constant="375" id="PaL-1l-BMC"/>
                                     <constraint firstAttribute="height" constant="101" id="nln-W7-CnO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1720,6 +1724,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vFY-ZM-aEt"/>
+        <segue reference="0tu-h8-nqK"/>
     </inferredMetricsTieBreakers>
 </document>
