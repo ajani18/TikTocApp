@@ -39,6 +39,16 @@ class Level9_ViewController: UIViewController {
         
         Reset9.isEnabled = false
         
+        if (Highscore9 > 0 && Highscore9 < 8) {
+            Next9.isHidden = false
+            Next9.isEnabled = true
+            
+        } else {
+            Next9.isHidden = true
+            Next9.isEnabled = false
+            
+        }
+        
     }
     
     @objc func updateCountdown() {
@@ -99,6 +109,16 @@ class Level9_ViewController: UIViewController {
         } else {
             Next9.isHidden = true
             Next9.isEnabled = false
+        }
+        
+        if (Highscore9 > 0 && Highscore9 < 8) {
+            Next9.isHidden = false
+            Next9.isEnabled = true
+            
+        } else {
+            Next9.isHidden = true
+            Next9.isEnabled = false
+            
         }
     }
     

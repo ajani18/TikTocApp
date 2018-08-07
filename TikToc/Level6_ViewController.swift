@@ -15,7 +15,7 @@ class Level6_ViewController: UIViewController {
     var Highscore6 = 100000000000
 
     @IBAction func Tutorial6(_ sender: Any) {
-        createAlert(title: "Level 6", message: "This level is about accuracy, try to get between 0.3 & 0.4 seconds")
+        createAlert(title: "Level 6", message: "This level is about accuracy, try to get between 0.30 & 0.40 seconds")
     }
     @IBOutlet weak var ScoreLblLvl6: UILabel!
     
@@ -66,6 +66,16 @@ class Level6_ViewController: UIViewController {
             nextBtnLvl6.isEnabled = false
             
         }
+        
+        if (Highscore6 > 30 && Highscore6 < 40) {
+            nextBtnLvl6.isHidden = false
+            nextBtnLvl6.isEnabled = true
+            
+        } else {
+            nextBtnLvl6.isHidden = true
+            nextBtnLvl6.isEnabled = false
+            
+        }
     }
     @IBAction func ResetActionLvl6(_ sender: Any) {
         Score6 = 0
@@ -88,6 +98,17 @@ class Level6_ViewController: UIViewController {
         StopLvl6.isHidden = false
         
         ResetLvl6.isEnabled = false
+        
+        if (Highscore6 > 30 && Highscore6 < 40) {
+            nextBtnLvl6.isHidden = false
+            nextBtnLvl6.isEnabled = true
+            
+        } else {
+            nextBtnLvl6.isHidden = true
+            nextBtnLvl6.isEnabled = false
+            
+        }
+        
     }
     
     @objc func updateCountdown() {

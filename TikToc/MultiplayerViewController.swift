@@ -140,9 +140,10 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         start2.isEnabled = true
         stop2.isEnabled = false
         
-         directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+        directionWinnerLbl.text = "AS FAST AS YOU CAN HIT START AND STOP"
+
+        directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
-        directionWinnerLbl.text = "Hit Star then Stop"
 
     }
     
@@ -206,10 +207,15 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 //        }
         
         if (Score2 > Score) {
-            directionWinnerLbl.text = "Player 1 Wins"
+            directionWinnerLbl.text = "PLAYER 1 WINS, PLAYER 2 HIT RESET"
+//            directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//            directionWinnerLbl.text = "NOW HIT RESET"
+
         } else if (Score > Score2){
             directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
-            directionWinnerLbl.text = "Player 2 Wins"
+            directionWinnerLbl.text = "PLAYER 2 WINS, NOW HIT RESET "
+//            directionWinnerLbl.text = "NOW HIT RESET"
+
         }
         
         start2.isHidden = false
@@ -218,9 +224,11 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         reset2.isEnabled = true
         start2.isEnabled = false
         
-        directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
+//        directionWinnerLbl.text = "HIT RESET"
+//
+//        directionWinnerLbl.transform =  CGAffineTransform(rotationAngle: CGFloat(Double.pi))
         
-//        directionWinnerLbl.text = "Hit Reset"
+        
 
         
 //        if (Score < Score2){
@@ -249,7 +257,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
 
         start2.isEnabled = false
         
-        directionWinnerLbl.text = "Now You Can Hit Reset to Start Again"
+        directionWinnerLbl.text = "PLAYER 1 HIT RESET TO PLAY AGAIN"
 
         
 //        winnerLabel.isHidden = true
@@ -269,7 +277,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        directionWinnerLbl.text = "Hit Start then Stop"
+        directionWinnerLbl.text = "AS FAST AS YOU CAN HIT START AND STOP"
         
 //        player2Label.isHidden = false
         

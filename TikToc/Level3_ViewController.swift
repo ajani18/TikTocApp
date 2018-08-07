@@ -83,6 +83,14 @@ class Level3_ViewController: UIViewController {
             nextBtn3.isEnabled = false
         }
         
+        if (Highscore3 > 40 && Highscore3 < 60) {
+            nextBtn3.isHidden = false
+            nextBtn3.isEnabled = true
+        } else {
+            nextBtn3.isHidden = true
+            nextBtn3.isEnabled = false
+        }
+        
     }
     
     @IBAction func StartAction3(_ sender: Any) {
@@ -92,6 +100,14 @@ class Level3_ViewController: UIViewController {
         stop3.isHidden = false
         
         reset3.isEnabled = false
+        
+        if (Highscore3 > 40 && Highscore3 < 60) {
+            nextBtn3.isHidden = false
+            nextBtn3.isEnabled = true
+        } else {
+            nextBtn3.isHidden = true
+            nextBtn3.isEnabled = false
+        }
     }
     
     @objc func updateCountdown() {

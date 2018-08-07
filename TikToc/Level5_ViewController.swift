@@ -15,10 +15,13 @@ class Level5_ViewController: UIViewController {
     var Highscore12356 = 100000000000
     
     @IBAction func Tutorial5(_ sender: Any) {
-        createAlert(title: "Level 5", message: "The Stop Button will appear randomly and get a time below 2.0 seconds")
+        createAlert(title: "Level 5", message: "The Stop Button will appear randomly and get a time below 1.5 seconds")
     }
     
-
+    @IBOutlet weak var home5: UIButton!
+    
+    @IBOutlet weak var tut5: UIButton!
+    
     @IBOutlet weak var ScoreLblLvl5: UILabel!
     
     @IBOutlet weak var StartLblLvl4: UIButton!
@@ -53,6 +56,10 @@ class Level5_ViewController: UIViewController {
         
         StopLvl5.center.x = xoffset + buttonWidth / 2
         StopLvl5.center.y = yoffset + buttonHeight / 2
+        
+        home5.isHidden = true
+        
+        tut5.isHidden = true
 
     }
     
@@ -120,6 +127,10 @@ class Level5_ViewController: UIViewController {
             nextBtnLvl5.isHidden = true
             nextBtnLvl5.isEnabled = false
         }
+        
+        home5.isHidden = true
+        
+        tut5.isHidden = true
         
     }
     

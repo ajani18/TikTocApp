@@ -13,7 +13,11 @@ class Level2_ViewController: UIViewController {
     var timer = Timer()
     var Score = 0
     var Highscorelvl2 = 100000000000
-
+    
+    @IBOutlet weak var home2: UIButton!
+    
+    @IBOutlet weak var tut2: UIButton!
+    
     @IBOutlet weak var ScoreLabelLvl2: UILabel!
     
     @IBOutlet weak var HighScoreLvl2: UILabel!
@@ -28,7 +32,7 @@ class Level2_ViewController: UIViewController {
     
     @IBAction func TutorialLvl2(_ sender: Any) {
         
-        createAlert(title: "Level 2 Tutorial", message: "The Stop Button will appear randomly and get a time below 2.0 seconds")
+        createAlert(title: "Level 2 Tutorial", message: "Tap Start. Stop., which will appear randomly, and get a time below 2.0 seconds.")
         
     }
     
@@ -56,6 +60,9 @@ class Level2_ViewController: UIViewController {
         stopLvl2.center.x = xoffset + buttonWidth / 2
         stopLvl2.center.y = yoffset + buttonHeight / 2
         
+        home2.isHidden = true
+        
+        tut2.isHidden = true
     }
     
     @objc func updateCountdown() {
@@ -109,6 +116,10 @@ class Level2_ViewController: UIViewController {
             nextBtnLvl2.isHidden = true
             nextBtnLvl2.isEnabled = false
         }
+        
+        tut2.isHidden = false
+        
+        home2.isHidden = false 
         
     }
     

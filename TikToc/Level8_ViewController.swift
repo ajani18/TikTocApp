@@ -16,9 +16,13 @@ class Level8_ViewController: UIViewController {
     
     
     @IBAction func Tutorial8(_ sender: Any) {
-        createAlert(title: "Level 8", message: "The Stop Button will appear randomly and get a time below 0.4 seconds")
+        createAlert(title: "Level 8", message: "The stop button will appear randomly and get a time below 0.4 seconds.")
 
     }
+    
+    @IBOutlet weak var home9: UIButton!
+    
+    @IBOutlet weak var tut8: UIButton!
     
     @IBOutlet weak var ScoreLblLvl8: UILabel!
     
@@ -54,7 +58,9 @@ class Level8_ViewController: UIViewController {
         
         StopLvl8.center.x = xoffset + buttonWidth / 2
         StopLvl8.center.y = yoffset + buttonHeight / 2
+        home9.isHidden = true
         
+        tut8.isHidden = true
     }
     
     @objc func updateCountdown() {
@@ -97,7 +103,10 @@ class Level8_ViewController: UIViewController {
             nextBtn8.isEnabled = false
         }
         
-    
+        home9.isHidden = true
+        
+        tut8.isHidden = true
+        
     }
     
     @IBAction func ResetActionLvl8(_ sender: Any) {

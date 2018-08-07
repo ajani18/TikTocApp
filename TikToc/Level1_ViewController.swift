@@ -15,7 +15,7 @@ class Level1_ViewController: UIViewController {
     var Highscore123 = 100000000000
     
     @IBAction func TutorialAction(_ sender: Any) {
-        createAlert(title: "Level 1", message: "Start. Stop. Reset. its as Easy as That")
+        createAlert(title: "Level 1 Tutorial", message: "Tap Start. Stop. and get a time below 0.50 seconds and hit Reset to start again.")
     }
     
     @IBOutlet weak var resetLvl1: UIButton!
