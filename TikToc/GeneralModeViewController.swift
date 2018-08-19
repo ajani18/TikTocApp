@@ -12,7 +12,7 @@ class GeneralModeViewController: UIViewController {
     
     var timer = Timer()
     var Score = 0
-    var Highscore1 = 100000000000
+    var Highscore1 = 10000
 
     @IBOutlet weak var resetBtn: UIButton!
     
@@ -41,7 +41,7 @@ class GeneralModeViewController: UIViewController {
         Score += 1
         
         //Set counter in UILabel
-        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 100, (Score % 3600) % 100)
         
     }
     
@@ -51,7 +51,7 @@ class GeneralModeViewController: UIViewController {
         
         if ((Highscore1 > Score) && (Score != 0))  {
             Highscore1 = Score
-            HighscoreLbl.text = String(format: "%02d:%02d.%02d", Highscore1 / 3600, (Highscore1 % 3600) / 60, (Highscore1 % 3600) % 60)
+            HighscoreLbl.text = String(format: "%02d:%02d.%02d", Highscore1 / 3600, (Highscore1 % 3600) / 100, (Highscore1 % 3600) % 100)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore1, forKey: "Highscore3")
             HighscoreDefault.synchronize()
@@ -71,7 +71,7 @@ class GeneralModeViewController: UIViewController {
     @IBAction func RestAction(_ sender: Any) {
         Score = 0
         StopAction(sender)
-        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 100, (Score % 3600) % 100)
         
         stop.isHidden = true
         start.isHidden = false
@@ -90,7 +90,7 @@ class GeneralModeViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore3") != nil) {
             Highscore1 = HighscoreDefault.value(forKey: "Highscore3") as! Int
-            HighscoreLbl.text = String(format: "%02d:%02d.%02d", Highscore1 / 3600, (Highscore1 % 3600) / 60, (Highscore1 % 3600) % 60)
+            HighscoreLbl.text = String(format: "%02d:%02d.%02d", Highscore1 / 3600, (Highscore1 % 3600) / 100, (Highscore1 % 3600) % 100)
             
         }
         

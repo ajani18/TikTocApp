@@ -12,7 +12,7 @@ class Level7_ViewController: UIViewController {
     
     var timer7 = Timer()
     var Score7 = 0
-    var Highscore7 = 100000000000
+    var Highscore7 = 10000
     
     @IBAction func Tutoiral7(_ sender: Any) {
         createAlert(title: "Level 7", message: "Hit Start. Stop. Reset. and get below 0.15 seconds")

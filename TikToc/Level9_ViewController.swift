@@ -12,7 +12,7 @@ class Level9_ViewController: UIViewController {
     
     var timer9 = Timer()
     var Score9 = 0
-    var Highscore9 = 100000000000
+    var Highscore9 = 10000
     
     
     @IBAction func Tutorial9(_ sender: Any) {

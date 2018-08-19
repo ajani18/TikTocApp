@@ -12,7 +12,7 @@ class Level2_ViewController: UIViewController {
     
     var timer = Timer()
     var Score = 0
-    var Highscorelvl2 = 100000000000
+    var Highscorelvl2 = 10000
     
     @IBOutlet weak var home2: UIButton!
     
@@ -32,7 +32,7 @@ class Level2_ViewController: UIViewController {
     
     @IBAction func TutorialLvl2(_ sender: Any) {
         
-        createAlert(title: "Level 2 Tutorial", message: "Tap Start. Stop., which will appear randomly, and get a time below 2.0 seconds.")
+        createAlert(title: "Level 2 Tutorial", message: "Tap Start. Stop., which will appear randomly, and get a time below 2.0 seconds. If button goes off screen just hit back button.")
         
     }
     

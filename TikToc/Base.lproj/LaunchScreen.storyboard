@@ -25,12 +25,12 @@
                                 <color key="highlightedColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.54901960780000003" green="0.83137254900000002" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aTe-Gf-TSU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="KT9-nf-ZTF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aTe-Gf-TSU" secondAttribute="bottom" constant="275" id="OnM-5M-oL7"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aTe-Gf-TSU" secondAttribute="trailing" constant="131" id="YPP-Wj-v63"/>
-                            <constraint firstItem="aTe-Gf-TSU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="bnq-hq-dIe"/>
+                            <constraint firstItem="aTe-Gf-TSU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="AmO-h2-N8N"/>
+                            <constraint firstItem="aTe-Gf-TSU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="255" id="Nf0-jD-1Hw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aTe-Gf-TSU" secondAttribute="bottom" constant="275" id="osW-qI-Jys"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aTe-Gf-TSU" secondAttribute="trailing" constant="131" id="sVF-NB-GGj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

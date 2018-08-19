@@ -12,7 +12,7 @@ class Level3_ViewController: UIViewController {
     
     var timer3 = Timer()
     var Score3 = 0
-    var Highscore3 = 100000000000
+    var Highscore3 = 1000
     
     
     @IBAction func TutorialAction3(_ sender: Any) {

@@ -12,7 +12,7 @@ class Level8_ViewController: UIViewController {
     
     var timer8 = Timer()
     var Score8 = 0
-    var Highscore8 = 100000000000
+    var Highscore8 = 1000000
     
     
     @IBAction func Tutorial8(_ sender: Any) {
@@ -103,9 +103,9 @@ class Level8_ViewController: UIViewController {
             nextBtn8.isEnabled = false
         }
         
-        home9.isHidden = true
+        home9.isHidden = false
         
-        tut8.isHidden = true
+        tut8.isHidden = false
         
     }
     

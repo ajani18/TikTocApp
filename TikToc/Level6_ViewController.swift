@@ -12,7 +12,7 @@ class Level6_ViewController: UIViewController {
     
     var timer6 = Timer()
     var Score6 = 0
-    var Highscore6 = 100000000000
+    var Highscore6 = 10000
 
     @IBAction func Tutorial6(_ sender: Any) {
         createAlert(title: "Level 6", message: "This level is about accuracy, try to get between 0.30 & 0.40 seconds")
