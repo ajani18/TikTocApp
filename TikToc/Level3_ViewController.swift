@@ -35,7 +35,7 @@ class Level3_ViewController: UIViewController {
     @IBAction func ResetAction3(_ sender: Any) {
         Score3 = 0
         StopAction3(sender)
-        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
+        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 100, (Score3 % 3600) % 100)
         
         stop3.isHidden = true
         start3.isHidden = false
@@ -71,7 +71,7 @@ class Level3_ViewController: UIViewController {
         
         if (Score3 > 40 && Score3 < 60){
             Highscore3 = Score3
-            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 100, (Highscore3 % 3600) % 100)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore3, forKey: "Highscore123123")
             HighscoreDefault.synchronize()
@@ -114,7 +114,7 @@ class Level3_ViewController: UIViewController {
         Score3 += 1
         
         //Set counter in UILabel
-        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 60, (Score3 % 3600) % 60)
+        ScoreLbl3.text! = String(format: "%02d:%02d.%02d", Score3 / 3600, (Score3 % 3600) / 100, (Score3 % 3600) % 100)
         
     }
 
@@ -124,7 +124,7 @@ class Level3_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123123") != nil) {
             Highscore3 = HighscoreDefault.value(forKey: "Highscore123123") as! Int
-            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 60, (Highscore3 % 3600) % 60)
+            HighScoreLbl3.text = String(format: "%02d:%02d.%02d", Highscore3 / 3600, (Highscore3 % 3600) / 100, (Highscore3 % 3600) % 100)
             
         }
         

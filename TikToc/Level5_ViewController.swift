@@ -67,14 +67,14 @@ class Level5_ViewController: UIViewController {
         Score123 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 100, (Score123 % 3600) % 100)
         
     }
     
     @IBAction func ResetActionLvl5(_ sender: Any) {
         Score123 = 0
         StopActionLvl5(sender)
-        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 60, (Score123 % 3600) % 60)
+        ScoreLblLvl5.text! = String(format: "%02d:%02d.%02d", Score123 / 3600, (Score123 % 3600) / 100, (Score123 % 3600) % 100)
         
         StopLvl5.isHidden = true
         StartLblLvl4.isHidden = false
@@ -90,7 +90,7 @@ class Level5_ViewController: UIViewController {
         
         if ((Highscore12356 > Score123) && (Score123 != 0))  {
             Highscore12356 = Score123
-            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 100, (Highscore12356 % 3600) % 100)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore12356, forKey: "Highscore123456")
             HighscoreDefault.synchronize()
@@ -140,7 +140,7 @@ class Level5_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123456") != nil) {
             Highscore12356 = HighscoreDefault.value(forKey: "Highscore123456") as! Int
-            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 60, (Highscore12356 % 3600) % 60)
+            HighScoreLblLvl5.text = String(format: "%02d:%02d.%02d", Highscore12356 / 3600, (Highscore12356 % 3600) / 100, (Highscore12356 % 3600) % 100)
             
         }
         

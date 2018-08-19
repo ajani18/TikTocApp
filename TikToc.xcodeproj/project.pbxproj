@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB0C982F2129DED500BE4BC6 /* Level4New_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C982E2129DED500BE4BC6 /* Level4New_ViewController.swift */; };
 		AB0C98312129F97D00BE4BC6 /* Level9NEW_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C98302129F97D00BE4BC6 /* Level9NEW_ViewController.swift */; };
+		AB0C9833212A009800BE4BC6 /* Level12_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0C9832212A009800BE4BC6 /* Level12_ViewController.swift */; };
 		AB1C4E602120996B00950C71 /* Level0_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1C4E5F2120996B00950C71 /* Level0_ViewController.swift */; };
 		AB4D3D8A20FD109900BC6180 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D8920FD109900BC6180 /* AppDelegate.swift */; };
 		AB4D3D8C20FD109900BC6180 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB4D3D8B20FD109900BC6180 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		AB0C982E2129DED500BE4BC6 /* Level4New_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level4New_ViewController.swift; sourceTree = "<group>"; };
 		AB0C98302129F97D00BE4BC6 /* Level9NEW_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level9NEW_ViewController.swift; sourceTree = "<group>"; };
+		AB0C9832212A009800BE4BC6 /* Level12_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level12_ViewController.swift; sourceTree = "<group>"; };
 		AB1C4E5F2120996B00950C71 /* Level0_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level0_ViewController.swift; sourceTree = "<group>"; };
 		AB4D3D8620FD109900BC6180 /* TikToc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TikToc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB4D3D8920FD109900BC6180 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				AB4D3D8B20FD109900BC6180 /* ViewController.swift */,
 				AB1C4E5F2120996B00950C71 /* Level0_ViewController.swift */,
 				AB4D3D8D20FD109900BC6180 /* Main.storyboard */,
+				AB0C9832212A009800BE4BC6 /* Level12_ViewController.swift */,
 				AB0C98302129F97D00BE4BC6 /* Level9NEW_ViewController.swift */,
 				AB0C982E2129DED500BE4BC6 /* Level4New_ViewController.swift */,
 				AB6725482107C5A9009B1869 /* Level1_ViewController.swift */,
@@ -198,6 +201,7 @@
 				AB4D3D9E20FD125A00BC6180 /* GeneralModeViewController.swift in Sources */,
 				AB6725492107C5A9009B1869 /* Level1_ViewController.swift in Sources */,
 				ABF1FBB4210F8C0F00AF5DC7 /* Level6_ViewController.swift in Sources */,
+				AB0C9833212A009800BE4BC6 /* Level12_ViewController.swift in Sources */,
 				ABF1FBB6210F94F900AF5DC7 /* Level7_ViewController.swift in Sources */,
 				AB964C0620FF956300D698E0 /* MultiplayerViewController.swift in Sources */,
 				ABF1FBB2210F7F2000AF5DC7 /* Level5_ViewController.swift in Sources */,

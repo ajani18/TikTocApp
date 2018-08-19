@@ -45,7 +45,7 @@ class Level7_ViewController: UIViewController {
         Score7 += 1
         
         //Set counter in UILabel
-        ScoreLblLvl7.text! = String(format: "%02d:%02d.%02d", Score7 / 3600, (Score7 % 3600) / 60, (Score7 % 3600) % 60)
+        ScoreLblLvl7.text! = String(format: "%02d:%02d.%02d", Score7 / 3600, (Score7 % 3600) / 100, (Score7 % 3600) % 100)
         
     }
     
@@ -54,7 +54,7 @@ class Level7_ViewController: UIViewController {
         
         if ((Highscore7 > Score7) && (Score7 != 0))  {
             Highscore7 = Score7
-            HighScoreLblLvl7.text = String(format: "%02d:%02d.%02d", Highscore7 / 3600, (Highscore7 % 3600) / 60, (Highscore7 % 3600) % 60)
+            HighScoreLblLvl7.text = String(format: "%02d:%02d.%02d", Highscore7 / 3600, (Highscore7 % 3600) / 100, (Highscore7 % 3600) % 100)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore7, forKey: "Highscore123489")
             HighscoreDefault.synchronize()
@@ -98,7 +98,7 @@ class Level7_ViewController: UIViewController {
     @IBAction func ResetActionLvl7(_ sender: Any) {
         Score7 = 0
         StopActionLvl7(sender)
-        ScoreLblLvl7.text! = String(format: "%02d:%02d.%02d", Score7 / 3600, (Score7 % 3600) / 60, (Score7 % 3600) % 60)
+        ScoreLblLvl7.text! = String(format: "%02d:%02d.%02d", Score7 / 3600, (Score7 % 3600) / 100, (Score7 % 3600) % 100)
         
         StopLvl7.isHidden = true
         StartLvl7.isHidden = false
@@ -115,7 +115,7 @@ class Level7_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore123489") != nil) {
             Highscore7 = HighscoreDefault.value(forKey: "Highscore123489") as! Int
-            HighScoreLblLvl7.text = String(format: "%02d:%02d.%02d", Highscore7 / 3600, (Highscore7 % 3600) / 60, (Highscore7 % 3600) % 60)
+            HighScoreLblLvl7.text = String(format: "%02d:%02d.%02d", Highscore7 / 3600, (Highscore7 % 3600) / 100, (Highscore7 % 3600) % 100)
             
         }
         

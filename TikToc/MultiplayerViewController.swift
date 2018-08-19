@@ -111,7 +111,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         Score += 1
         
         //Set counter in UILabel
-        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 100, (Score % 3600) % 100)
         
     }
     
@@ -149,7 +149,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ResetAction(_ sender: Any) {
         Score = 0
         StopAction(sender)
-        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 60, (Score % 3600) % 60)
+        ScoreLbl.text! = String(format: "%02d:%02d.%02d", Score / 3600, (Score % 3600) / 100, (Score % 3600) % 100)
         
         stop.isHidden = true
         start.isHidden = false
@@ -187,7 +187,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
         Score2 += 1
         
         //Set counter in UILabel
-        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
+        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 100, (Score2 % 3600) % 100)
         
     }
     
@@ -245,7 +245,7 @@ class MultiplayerViewController: UIViewController, UITextFieldDelegate {
     @IBAction func ResetAction2(_ sender: Any) {
         Score2 = 0
         StopAction2(sender)
-        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 60, (Score2 % 3600) % 60)
+        ScoreLbl2.text! = String(format: "%02d:%02d.%02d", Score2 / 3600, (Score2 % 3600) / 100, (Score2 % 3600) % 100)
         
         stop2.isHidden = true
         start2.isHidden = false

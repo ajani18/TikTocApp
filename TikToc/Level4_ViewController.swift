@@ -46,7 +46,7 @@ class Level4_ViewController: UIViewController {
         Score45 += 1
         
         //Set counter in UILabel
-        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
+        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 100, (Score45 % 3600) % 100)
         
     }
     
@@ -55,7 +55,7 @@ class Level4_ViewController: UIViewController {
         
         if ((Highscore4 > Score45) && (Score45 != 0))  {
             Highscore4 = Score45
-            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
+            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 100, (Highscore4 % 3600) % 100)
             let HighscoreDefault = UserDefaults.standard
             HighscoreDefault.set(Highscore4, forKey: "Highscore456")
             HighscoreDefault.synchronize()
@@ -97,7 +97,7 @@ class Level4_ViewController: UIViewController {
     @IBAction func ResetActionLvl4(_ sender: Any) {
         Score45 = 0
         StopActionLvl4(sender)
-        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 60, (Score45 % 3600) % 60)
+        ScoreLabelLvl4.text! = String(format: "%02d:%02d.%02d", Score45 / 3600, (Score45 % 3600) / 100, (Score45 % 3600) % 100)
         
         StopLvl4.isHidden = true
         StartLvl4.isHidden = false
@@ -117,7 +117,7 @@ class Level4_ViewController: UIViewController {
         let HighscoreDefault = UserDefaults.standard
         if (HighscoreDefault.value(forKey: "Highscore456") != nil) {
             Highscore4 = HighscoreDefault.value(forKey: "Highscore456") as! Int
-            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 60, (Highscore4 % 3600) % 60)
+            HighScoreLblLvl4.text = String(format: "%02d:%02d.%02d", Highscore4 / 3600, (Highscore4 % 3600) / 100, (Highscore4 % 3600) % 100)
             
         }
         

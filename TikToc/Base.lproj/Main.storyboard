@@ -1996,7 +1996,7 @@
         <!--Level 12-->
         <scene sceneID="0pr-1i-MbN">
             <objects>
-                <viewController title="Level 12" id="Jcn-1Z-7s2" customClass="Level4New_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Level 12" id="Jcn-1Z-7s2" customClass="Level12_ViewController" customModule="TikToc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uta-BA-LNr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2016,6 +2016,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="startAction12:" destination="Jcn-1Z-7s2" eventType="touchUpInside" id="bJ6-gP-mN1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTY-r2-S1w">
                                 <rect key="frame" x="0.0" y="457" width="375" height="101"/>
@@ -2025,6 +2028,9 @@
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="stop12:" destination="Jcn-1Z-7s2" eventType="touchUpInside" id="9R3-U5-HQM"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlN-Oz-TJH">
                                 <rect key="frame" x="0.0" y="566" width="375" height="101"/>
@@ -2034,6 +2040,9 @@
                                 <state key="normal" title="Reset">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ResetAction12:" destination="Jcn-1Z-7s2" eventType="touchUpInside" id="o4C-kl-3aa"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGR-qf-GOJ">
                                 <rect key="frame" x="0.0" y="348" width="375" height="101"/>
@@ -2061,6 +2070,9 @@
                                 <state key="normal" title="Tutorial">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="Tutorial12:" destination="Jcn-1Z-7s2" eventType="touchUpInside" id="BL6-tr-v4B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wu6-gh-dfg">
                                 <rect key="frame" x="0.0" y="88" width="375" height="28"/>
@@ -2075,6 +2087,14 @@
                         <color key="backgroundColor" red="0.93378299470000004" green="0.50834900139999994" blue="0.60392040010000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="3R9-zw-PWR"/>
                     </view>
+                    <connections>
+                        <outlet property="highScore12" destination="9b6-Yl-uLW" id="rsM-65-XrO"/>
+                        <outlet property="next12" destination="wGR-qf-GOJ" id="XgX-Oq-xCK"/>
+                        <outlet property="reset12" destination="mlN-Oz-TJH" id="mzQ-3z-7qe"/>
+                        <outlet property="scoreLbl12" destination="XOw-0O-FuC" id="b8N-bP-6JU"/>
+                        <outlet property="start12" destination="Ned-SD-cbQ" id="gtK-BH-4iC"/>
+                        <outlet property="stop12" destination="hTY-r2-S1w" id="245-Ik-d9f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UJ5-bw-C39" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
